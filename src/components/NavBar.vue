@@ -36,14 +36,16 @@ export default {
 
 <style>
 .header_area {
-  background-color: #fff;
+  background-color: #f9f9f9;
+  padding: 20px 20px;
+  text-align: center;
+  width: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   z-index: 100;
   transition: all 0.3s ease;
 }
 
 .header_area .main-menu .navbar .navbar-nav .nav-item .nav-link {
-  padding: 10px 10px;
   color: #000;
   font-size: 16px;
   font-weight: 500;

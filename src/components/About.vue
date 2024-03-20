@@ -154,7 +154,7 @@ export default {
   text-align: center;
   position: relative;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 .site-title {
