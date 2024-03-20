@@ -1,33 +1,45 @@
 <template>
   <footer class="footer-area">
     <div class="container">
-      <div class="">
-        <div class="site-logo text-center py-4">
-          <img src="" style="width: 44px; object-fit: cover; border-radius: 50%" alt="logo" />
-        </div>
-        <div class="text-center">
-          <h5 class="text-uppercase">Connect me on</h5>
-          <a target="_blank" rel="noreferrer" href="https://github.com/Boni619" class="social social-link"
-            ><i class="fab fa-github"></i
-          ></a>
-          <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/boni619" class="social social-link"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-          <a target="_blank" rel="noreferrer" href="https://twitter.com/gope_boni" class="social social-link"
-            ><i class="fab fa-twitter"></i
-          ></a>
-          <a href="mailto: boni619@gmail.com" class="social social-link"><i class="fas fa-envelope"></i></a>
-        </div>
-        <div class="copyrights text-center">
-          <p class="para">|| made with ❤️️ ||</p>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="footer-text text-center">
+            <p>Made with ❤️ by Parwar👋</p>
+          </div>
         </div>
       </div>
     </div>
   </footer>
 </template>
-<style scoped></style>
+<style scoped>
+.footer-area {
+  background-color: #f9f9f9;
+  padding: 20px 20px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #000;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.footer-text p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer-text p a:hover {
+  color: #61acfd;
+}
+</style>
 <script>
 export default {
-  name: 'FooTer',
+  name: 'Footer',
 };
 </script>

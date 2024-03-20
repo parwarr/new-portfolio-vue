@@ -19,7 +19,7 @@
                 ></a>
               </button>
               <button type="button" class="btn button secondary-button text-uppercase second-btn">
-                <a href="mailto: boni619@gmail.com">Hire Me</a>
+                <a href="mailto: parwar.habasch@gmx.de">Hire Me</a>
               </button>
             </div>
           </div>
@@ -146,5 +146,29 @@ export default {
   max-height: 400px;
   max-width: 400px;
   padding: 20px;
+}
+
+.site-banner {
+  background-color: #f9f9f9;
+  padding: 20px 20px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.site-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title-text {
+  font-size: 40px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
 }
 </style>
