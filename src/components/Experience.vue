@@ -1,5 +1,8 @@
 <template>
   <div id="experience" class="container-fluid">
+    <header>
+      <h1 class="pt-20 py-3 text-3xl lg:text-5xl">Experience 📝</h1>
+    </header>
     <div class="row">
       <div class="col-lg-12">
         <ul class="timeline">

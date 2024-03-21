@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-gray-100 p-5 text-center relative w-full mt-6 h-[900px]">
+  <section class="bg-gray-100 p-5 text-center relative w-full mt-6 h-auto]">
     <div class="container mx-auto">
       <div class="flex flex-wrap justify-center">
         <!-- Centered column for content -->
@@ -8,7 +8,7 @@
           <div class="mb-12">
             <!-- Add margin-bottom to push the lottie animation down -->
             <h1
-              class="text-4xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.43)] flex items-center justify-center md:justify-start"
+              class="text-4xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.43)] flex items-center justify-center md:justify-center pb-5"
             >
               <span>Hi! I'm</span>
               <span
@@ -22,11 +22,17 @@
                 draggable="false"
               />
             </h1>
-            <h3 class="uppercase pb-4">
+            <h3
+              class="text-4xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-4xl font-bold dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.43)] flex items-center justify-center md:justify-center pb-5"
+            >
               I am a
-              <span id="subheading">{{ typeValue }} <span class="blinking-cursor">|</span></span>
+              <span
+                id="subheading"
+                class="ml-2 bg-gradient-to-r from-sky-300 via-blue-500 to-indigo-300 bg-clip-text font-bold text-transparent drop-shadow-[0_0_15px_rgba(50,105,235,0.43)] lg:ml-4"
+                >{{ typeValue }} </span
+              ><span class="blinking-cursor">|</span>
             </h3>
-            <div class="flex flex-row flex-wrap justify-center">
+            <div class="flex flex-row flex-wrap justify-center pt-17">
               <button
                 type="button"
                 class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4 uppercase"
@@ -45,9 +51,16 @@
           </div>
           <!-- Lottie Animation -->
           <div class="flex justify-center">
-            <Vue3Lottie :animationData="DeveloperJSON" :speed="1" loop autoplay class="max-w-lg" />
+            <Vue3Lottie :animationData="DeveloperJSON" :speed="1" loop autoplay class="max-w-3xl" />
           </div>
         </div>
+      </div>
+      <div class="scroll-down">
+        <a href="#experience" class="mouse-wrapper">
+          <span class="mouse">
+            <span class="wheel"></span>
+          </span>
+        </a>
       </div>
     </div>
   </section>
@@ -118,5 +131,52 @@ export default {
 }
 .blinking-cursor {
   animation: blink 1s step-end infinite;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+}
+
+.mouse {
+  border: solid 3px #4458dc;
+  border-radius: 16px;
+  display: block;
+  margin: auto;
+  height: 34px;
+  position: relative;
+  width: 25px;
+}
+
+.mouse .wheel {
+  background: #4458dc;
+  border-radius: 100%;
+  display: block;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 5px;
+  width: 5px;
+  -webkit-animation: ani-mouse 2s linear infinite;
+  -moz-animation: ani-mouse 2s linear infinite;
+  animation: ani-mouse 2s linear infinite;
+}
+
+@keyframes ani-mouse {
+  0% {
+    top: 8px;
+    opacity: 1;
+  }
+  50% {
+    top: 15px;
+    opacity: 0.5;
+  }
+  100% {
+    top: 8px;
+    opacity: 1;
+  }
 }
 </style>
