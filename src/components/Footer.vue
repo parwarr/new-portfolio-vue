@@ -14,10 +14,8 @@
 <style scoped>
 .footer-area {
   background-color: #f9f9f9;
-  padding: 20px 20px;
+  padding: 20px 0;
   text-align: center;
-  position: absolute;
-  bottom: 0;
   width: 100%;
 }
 

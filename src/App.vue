@@ -1,21 +1,24 @@
 <template>
   <div>
     <NavBar />
-    <About />
+    <About id="about" />
+    <Experience id="experience" />
     <Footer />
   </div>
 </template>
 
 <script>
 import About from './components/About.vue';
-import NavBar from './components/NavBar.vue';
+import Experience from './components/Experience.vue';
 import Footer from './components/Footer.vue';
-import './assets/css/style.css';
+import NavBar from './components/NavBar.vue';
+import './style.css';
 export default {
   name: 'App',
   components: {
     About,
     NavBar,
+    Experience,
     Footer,
   },
 };

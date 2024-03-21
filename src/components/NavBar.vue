@@ -1,25 +1,47 @@
 <template>
-  <header class="header_area">
+  <header class="bg-gray-100 py-5 text-center w-full shadow-sm transition-all duration-300 ease-in-out">
     <div class="main-menu">
       <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="top-nav-fixed">
         <div class="collapse navbar-collapse" id="navbarNav">
-          <div class="mr-auto"></div>
-          <ul class="navbar-nav">
+          <ul class="navbar-nav flex items-center justify-center m-0 p-0">
             <li class="nav-item">
-              <router-link :to="{ name: 'Home' }" class="nav-link">Home</router-link>
-              <!-- <a class="nav-link" @click="scroll('home_page')">Home</a> -->
+              <a
+                href="#about"
+                class="nav-link text-black text-base font-medium uppercase px-4 py-2 cursor-pointer transition-all duration-300 ease-in-out"
+                >About</a
+              >
+              <!-- Example of another link -->
+              <!-- <a class="nav-link text-black font-medium uppercase px-4 py-2 cursor-pointer transition-all duration-300 ease-in-out" @click="scroll('home_page')">Home</a> -->
             </li>
             <li class="nav-item" v-if="$route?.meta?.hideLink === undefined">
-              <a class="nav-link" @click="scroll('experience')">EXPERIENCE</a>
+              <a
+                href="#experience"
+                class="nav-link text-black text-base font-medium uppercase px-4 py-2 cursor-pointer transition-all duration-300 ease-in-out"
+                >Experience</a
+              >
             </li>
             <li class="nav-item" v-if="$route?.meta?.hideLink === undefined">
-              <a class="nav-link" @click="scroll('education')">EDUCATION</a>
+              <a
+                class="nav-link text-black text-base font-medium uppercase px-4 py-2 cursor-pointer transition-all duration-300 ease-in-out"
+                @click="scroll('education')"
+                >EDUCATION</a
+              >
             </li>
             <li class="nav-item" v-if="$route?.meta?.hideLink === undefined">
-              <a class="nav-link" @click="scroll('skills')">SKILLS</a>
+              <a
+                class="nav-link text-black text-base font-medium uppercase px-4 py-2 cursor-pointer transition-all duration-300 ease-in-out"
+                @click="scroll('skills')"
+                >SKILLS</a
+              >
             </li>
             <li class="nav-item" v-if="$route?.meta?.hideLink === undefined">
-              <a class="nav-link" rel="noreferrer" href="https://github.com/parwarr" target="_blank">Projects</a>
+              <a
+                class="nav-link text-black text-base font-medium uppercase px-4 py-2 cursor-pointer transition-all duration-300 ease-in-out"
+                rel="noreferrer"
+                href="https://github.com/parwarr"
+                target="_blank"
+                >Projects</a
+              >
             </li>
           </ul>
         </div>
@@ -33,42 +55,3 @@ export default {
   name: 'NavBar',
 };
 </script>
-
-<style>
-.header_area {
-  background-color: #f9f9f9;
-  padding: 20px 20px;
-  text-align: center;
-  width: 100%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 100;
-  transition: all 0.3s ease;
-}
-
-.header_area .main-menu .navbar .navbar-nav .nav-item .nav-link {
-  color: #000;
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: uppercase;
-  padding: 0 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.header_area .main-menu .navbar .navbar-nav .nav-item .nav-link:hover {
-  color: #007bff;
-}
-
-.header_area .main-menu .navbar .navbar-nav .nav-item .nav-link.active {
-  color: #007bff;
-}
-
-.navbar-nav {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-</style>

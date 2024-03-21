@@ -1,37 +1,57 @@
 <template>
-  <section class="site-banner">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-md-12 site-title">
-          <h3 class="title-text text-uppercase">Hey, I am Parwar👋</h3>
-          <h4 class="text-uppercase">
-            I am a
-            <span id="subheading"
-              >{{ typeValue }} <span class="blinking-cursor">|</span>
-              <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span></span
+  <section class="bg-gray-100 p-5 text-center relative w-full mt-6 h-[900px]">
+    <div class="container mx-auto">
+      <div class="flex flex-wrap justify-center">
+        <!-- Centered column for content -->
+        <div class="w-full lg:w-2/3 mx-auto">
+          <!-- Text content -->
+          <div class="mb-12">
+            <!-- Add margin-bottom to push the lottie animation down -->
+            <h1
+              class="text-4xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.43)] flex items-center justify-center md:justify-start"
             >
-          </h4>
-          <div class="site-buttons">
-            <div class="d-flex flex-row flex-wrap">
-              <button type="button" class="btn button primary-button mr-4 text-uppercase first-btn">
+              <span>Hi! I'm</span>
+              <span
+                class="ml-2 bg-gradient-to-r from-sky-300 via-blue-500 to-indigo-300 bg-clip-text font-bold text-transparent drop-shadow-[0_0_15px_rgba(50,105,235,0.43)] lg:ml-4"
+                >Parwar</span
+              >
+              <img
+                src="https://cdn.discordapp.com/emojis/1118619705914179655.gif?size=80&quality=lossless"
+                alt="cinnamoroll"
+                class="ml-4 h-20 w-20"
+                draggable="false"
+              />
+            </h1>
+            <h3 class="uppercase pb-4">
+              I am a
+              <span id="subheading">{{ typeValue }} <span class="blinking-cursor">|</span></span>
+            </h3>
+            <div class="flex flex-row flex-wrap justify-center">
+              <button
+                type="button"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4 uppercase"
+              >
                 <a href="https://drive.google.com/file/d/1xe3pfKmqHvVcV5l-hQPhlcp12dSEhP4g/view" target="_blank"
-                  >RESUME &nbsp;<i class="fas fa-external-link-alt" aria-hidden="true"></i
+                  >Resume &nbsp;<i class="fas fa-external-link-alt" aria-hidden="true"></i
                 ></a>
               </button>
-              <button type="button" class="btn button secondary-button text-uppercase second-btn">
-                <a href="mailto: parwar.habasch@gmx.de">Hire Me</a>
+              <button
+                type="button"
+                class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded uppercase"
+              >
+                <a href="mailto:parwar.habasch@gmx.de">Hire Me</a>
               </button>
             </div>
           </div>
-          <div class="banner">
-            <Vue3Lottie :animationData="DeveloperJSON" :speed="1" loop autoplay />
+          <!-- Lottie Animation -->
+          <div class="flex justify-center">
+            <Vue3Lottie :animationData="DeveloperJSON" :speed="1" loop autoplay class="max-w-lg" />
           </div>
         </div>
       </div>
     </div>
   </section>
 </template>
-
 <script>
 import { Vue3Lottie } from 'vue3-lottie';
 import DeveloperJSON from '../assets/developer.json';
@@ -85,15 +105,8 @@ export default {
 };
 </script>
 
-<style scoped>
-.blinking-cursor {
-  color: #2c3e50;
-  -webkit-animation: 1s blink step-end infinite;
-  -moz-animation: 1s blink step-end infinite;
-  -ms-animation: 1s blink step-end infinite;
-  -o-animation: 1s blink step-end infinite;
-  animation: 1s blink step-end infinite;
-}
+<style>
+/* Tailwind handles most styling. Custom animations or very specific styles can still go here */
 @keyframes blink {
   from,
   to {
@@ -103,72 +116,7 @@ export default {
     color: #2c3e50;
   }
 }
-@-moz-keyframes blink {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-    color: #2c3e50;
-  }
-}
-@-webkit-keyframes blink {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-    color: #2c3e50;
-  }
-}
-@-ms-keyframes blink {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-    color: #2c3e50;
-  }
-}
-@-o-keyframes blink {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-    color: #2c3e50;
-  }
-}
-
-.banner {
-  display: flex;
-  justify-content: flex-end;
-  max-height: 400px;
-  max-width: 400px;
-  padding: 20px;
-}
-
-.site-banner {
-  background-color: #f9f9f9;
-  padding: 20px 20px;
-  text-align: center;
-  position: relative;
-  width: 100%;
-  margin-top: 25px;
-}
-
-.site-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title-text {
-  font-size: 35px;
-  font-weight: 700;
-  color: #2c3e50;
-  margin-bottom: 20px;
+.blinking-cursor {
+  animation: blink 1s step-end infinite;
 }
 </style>
