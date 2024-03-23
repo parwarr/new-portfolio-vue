@@ -2,8 +2,6 @@
   <div>
     <NavBar />
     <About id="about" />
-    <Experience id="experience" />
-    <Projects id="projects" />
     <Footer />
   </div>
 </template>
@@ -23,7 +21,6 @@ export default {
     Projects,
     Experience,
     Footer,
-    Particles,
   },
 };
 </script>

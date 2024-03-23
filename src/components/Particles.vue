@@ -19,7 +19,7 @@ const particlesLoaded = async container => {
       :options="{
         background: {
           color: {
-            value: '#0d47a1',
+            value: 'rgb(7, 9, 13)',
           },
         },
         fullScreen: {
@@ -30,51 +30,37 @@ const particlesLoaded = async container => {
         interactivity: {
           events: {
             onClick: {
-              enable: true,
-              mode: 'push',
+              enable: false,
             },
             onHover: {
               enable: true,
-              mode: 'grab',
+              mode: 'repulse',
             },
             resize: true,
           },
           modes: {
-            bubble: {
-              distance: 400,
-              duration: 2,
-              opacity: 0.8,
-              size: 40,
-            },
             push: {
               quantity: 4,
             },
             repulse: {
-              distance: 200,
-              duration: 0.4,
+              distance: 150,
+              duration: 1.5,
             },
           },
         },
         particles: {
           color: {
-            value: '#ffffff',
+            value: ['#0d47a1', '#ffffff'],
           },
           links: {
-            color: '#ffffff',
-            distance: 150,
-            enable: true,
-            opacity: 0.5,
-            width: 1,
-          },
-          collisions: {
-            enable: true,
+            enable: false,
           },
           move: {
             direction: 'none',
             enable: true,
             outMode: 'bounce',
             random: false,
-            speed: 10,
+            speed: 1,
             straight: false,
           },
           number: {
@@ -82,9 +68,13 @@ const particlesLoaded = async container => {
               enable: true,
               area: 800,
             },
-            value: 10,
+            value: 50,
           },
           opacity: {
+            random: {
+              enable: true,
+              minimumValue: 0.1,
+            },
             value: 0.5,
           },
           shape: {
@@ -92,7 +82,7 @@ const particlesLoaded = async container => {
           },
           size: {
             random: true,
-            value: 5,
+            value: { min: 1, max: 5 },
           },
         },
         detectRetina: true,
@@ -100,9 +90,3 @@ const particlesLoaded = async container => {
     />
   </div>
 </template>
-
-<style scoped>
-.read-the-docs {
-  color: #888;
-}
-</style>
