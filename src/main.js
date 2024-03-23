@@ -1,8 +1,7 @@
 import { createApp } from 'vue';
 import Vue3Lottie from 'vue3-lottie';
+import Particles from 'vue3-particles';
 import App from './App.vue';
 import './index.css';
 
-const app = createApp(App);
-app.use(Vue3Lottie);
-app.mount('#app');
+createApp(App).use(Particles, Vue3Lottie).mount('#app');

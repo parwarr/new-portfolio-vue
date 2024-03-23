@@ -1,5 +1,7 @@
 <template>
-  <section class="bg-gray-100 p-5 text-center relative w-full mt-6 h-auto]">
+  <section class="p-5 text-center relative w-full mt-6 h-auto]">
+    <Particles />
+
     <div class="container mx-auto">
       <div class="flex flex-wrap justify-center">
         <!-- Centered column for content -->
@@ -68,10 +70,13 @@
 <script>
 import { Vue3Lottie } from 'vue3-lottie';
 import DeveloperJSON from '../assets/developer.json';
+import Particles from './Particles.vue';
+
 export default {
   name: 'AboutMe',
   components: {
     Vue3Lottie,
+    Particles,
   },
   data() {
     return {

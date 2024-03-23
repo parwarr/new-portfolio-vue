@@ -23,6 +23,7 @@ export default {
     Projects,
     Experience,
     Footer,
+    Particles,
   },
 };
 </script>
