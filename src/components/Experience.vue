@@ -4,7 +4,7 @@
       <h1 class="text-4xl lg:text-6xl font-bold mb-12">Experience</h1>
     </header>
     <div class="flex flex-col items-center">
-      <el-timeline style="max-width: 700px" class="w-full">
+      <el-timeline style="max-width: 700px" class="w-full" v-motion-fade>
         <el-timeline-item timestamp="01/03/2024 - Present" placement="top">
           <el-card class="bg-transparent border border-slate-600 shadow-lg p-5">
             <h3 class="text-xl font-bold text-blue-500">Swisscom Schweiz AG</h3>
@@ -45,8 +45,7 @@
               intensive training in React, I was able to actively participate in customer projects after just 2-3 weeks.
               Through my participation in various customer projects, I also took on fullstack tasks, deepened my backend
               knowledge considerably, as well as frontend knowledge and acquired skills in React, NestJS, Prisma and
-              MariaDB. As a reference person I can give you yannik.zimmermann1@swisscom.com, he supported me through my
-              project time.
+              MariaDB.
             </p>
             <div class="flex flex-row mt-4">
               <h3 class="mr-2 text-blue-500 font-bold text-nowrap">Technologies used:</h3>
@@ -140,6 +139,15 @@
     </div>
   </div>
 </template>
+<script>
+import { MotionPlugin } from '@vueuse/motion';
+export default {
+  name: 'Experience',
+  directives: {
+    motion: MotionPlugin,
+  },
+};
+</script>
 <style>
 .el-card:hover {
   background-color: rgba(14, 30, 37, 0.5) !important;

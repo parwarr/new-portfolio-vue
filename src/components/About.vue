@@ -1,5 +1,5 @@
 <template>
-  <section class="p-5 text-center relative w-full mt-6 h-auto]">
+  <section class="p-5 text-center relative w-full mt-6 min-h-screen h-auto]">
     <Particles />
 
     <div class="container mx-auto">
