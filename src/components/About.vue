@@ -4,13 +4,10 @@
 
     <div class="container mx-auto">
       <div class="flex flex-wrap justify-center">
-        <!-- Centered column for content -->
         <div class="w-full lg:w-2/3 mx-auto">
-          <!-- Text content -->
-          <div class="mb-12">
-            <!-- Add margin-bottom to push the lottie animation down -->
+          <div class="mb-8">
             <h1
-              class="text-4xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.43)] flex items-center justify-center md:justify-center pb-5"
+              class="text-4xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.43)] flex items-center justify-center md:justify-center pb-5 text-slate-200"
             >
               <span>Hi! I'm</span>
               <span
@@ -25,7 +22,7 @@
               />
             </h1>
             <h3
-              class="text-4xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-4xl font-bold dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.43)] flex items-center justify-center md:justify-center pb-5"
+              class="text-4xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-4xl font-bold dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.43)] flex items-center justify-center md:justify-center pb-5 text-slate-200"
             >
               I am a
               <span
@@ -124,7 +121,6 @@ export default {
 </script>
 
 <style>
-/* Tailwind handles most styling. Custom animations or very specific styles can still go here */
 @keyframes blink {
   from,
   to {

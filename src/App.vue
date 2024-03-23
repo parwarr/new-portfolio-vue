@@ -2,6 +2,7 @@
   <div>
     <NavBar />
     <About id="about" />
+    <Experience id="experience" />
     <Footer />
   </div>
 </template>
