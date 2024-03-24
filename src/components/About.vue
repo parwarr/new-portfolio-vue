@@ -31,23 +31,15 @@
                 >{{ typeValue }} </span
               ><span class="blinking-cursor">|</span>
             </h3>
-            <div class="flex flex-row flex-wrap justify-center pt-17">
-              <button
-                type="button"
-                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4 uppercase"
-              >
+            <div class="flex flex-row flex-wrap justify-center pt-14">
+              <el-button type="primary" size="large">
                 <a
                   href="https://drive.google.com/file/d/11D61TRL0eMEd2em5nr14CUql7PIFgXtz/view?usp=sharing"
                   target="_blank"
-                  >Resume &nbsp;<i class="fas fa-external-link-alt" aria-hidden="true"></i
-                ></a>
-              </button>
-              <button
-                type="button"
-                class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded uppercase"
+                  >Resume</a
+                ></el-button
               >
-                <a href="mailto:parwar.habasch@gmx.de">Hire Me</a>
-              </button>
+              <el-button type="primary" size="large"><a href="mailto:parwar.habasch@gmx.de">Hire Me</a></el-button>
             </div>
           </div>
           <!-- Lottie Animation -->
