@@ -5,6 +5,9 @@
     </header>
     <div class="container mx-auto flex flex-col lg:flex-row items-center justify-center">
       <el-card class="bg-transparent border border-slate-600 shadow-lg p-5 flex justify-center">
+        <div>
+          <h4 class="text-lg text-blue-500">Feel free to send me a message!😀</h4>
+        </div>
         <div class="flex-grow p-5">
           <el-form
             ref="formRef"
