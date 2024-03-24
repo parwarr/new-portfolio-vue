@@ -3,6 +3,7 @@
     <NavBar />
     <About id="about" />
     <Experience id="experience" />
+    <Contact id="contact" />
     <Footer />
   </div>
 </template>
@@ -13,6 +14,7 @@ import Experience from './components/Experience.vue';
 import Footer from './components/Footer.vue';
 import NavBar from './components/NavBar.vue';
 import Projects from './components/Projects.vue';
+import Contact from './components/Contact.vue';
 import './style.css';
 export default {
   name: 'App',
@@ -22,6 +24,7 @@ export default {
     Projects,
     Experience,
     Footer,
+    Contact,
   },
 };
 </script>

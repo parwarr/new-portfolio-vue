@@ -15,8 +15,8 @@
                 >Parwar</span
               >
               <img
-                src="https://cdn.discordapp.com/emojis/1118619705914179655.gif?size=80&quality=lossless"
-                alt="cinnamoroll"
+                src="https://media3.giphy.com/media/U6e8Na5TJKEuDbhqpg/giphy.gif?cid=6c09b952voepgifu4xcf1y3hn11hj1mra11q97edjt55anda&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s"
+                alt="astronaut dancing"
                 class="ml-4 h-20 w-20"
                 draggable="false"
               />
