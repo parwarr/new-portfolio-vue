@@ -4,7 +4,7 @@
       <h1 class="text-4xl lg:text-6xl font-bold mb-12">Experience</h1>
     </header>
     <div class="flex flex-col items-center">
-      <el-timeline style="max-width: 700px" class="w-full" v-motion-fade>
+      <el-timeline style="max-width: 900px" class="w-full" v-motion-fade>
         <el-timeline-item timestamp="01/03/2024 - Present" placement="top">
           <el-card class="bg-transparent border border-slate-600 shadow-lg p-5">
             <h3 class="text-xl font-bold text-blue-500">Swisscom Schweiz AG</h3>
