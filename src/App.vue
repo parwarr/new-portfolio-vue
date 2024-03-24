@@ -26,5 +26,8 @@ export default {
     Footer,
     Contact,
   },
+  mounted() {
+    window.location.hash = 'about';
+  },
 };
 </script>

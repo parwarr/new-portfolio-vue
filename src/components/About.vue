@@ -53,13 +53,13 @@
             <Vue3Lottie :animationData="DeveloperJSON" :speed="1" loop autoplay class="max-w-3xl" />
           </div>
         </div>
-      </div>
-      <div class="scroll-down">
-        <a href="#experience" class="mouse-wrapper">
-          <span class="mouse">
-            <span class="wheel"></span>
-          </span>
-        </a>
+        <div class="scroll-down">
+          <a href="#experience" class="mouse-wrapper">
+            <span class="mouse">
+              <span class="wheel"></span>
+            </span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
