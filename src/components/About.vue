@@ -36,7 +36,9 @@
                 type="button"
                 class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4 uppercase"
               >
-                <a href="https://drive.google.com/file/d/1xe3pfKmqHvVcV5l-hQPhlcp12dSEhP4g/view" target="_blank"
+                <a
+                  href="https://drive.google.com/file/d/11D61TRL0eMEd2em5nr14CUql7PIFgXtz/view?usp=sharing"
+                  target="_blank"
                   >Resume &nbsp;<i class="fas fa-external-link-alt" aria-hidden="true"></i
                 ></a>
               </button>
