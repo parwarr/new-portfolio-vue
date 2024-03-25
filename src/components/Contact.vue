@@ -22,7 +22,9 @@
             label-width="auto"
             class="demo-dynamic"
             name="contact-form"
-            netlify
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
           >
             <el-form-item
               prop="name"
@@ -132,9 +134,9 @@ const submitForm = (formEl: FormInstance | undefined) => {
       // axios.post('http://localhost:3000/contact', dynamicValidateForm).then(response => {
       //   console.log(response);
       // });
-      resetForm(formEl);
       setTimeout(() => {
         open2();
+        resetForm(formEl);
       }, 1000);
       return true;
     } else {
