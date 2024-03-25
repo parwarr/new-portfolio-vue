@@ -15,73 +15,77 @@
     <div class="container mx-auto flex flex-col lg:flex-row items-center justify-center">
       <el-card class="bg-transparent border border-slate-600 shadow-lg p-5 flex justify-center">
         <div class="flex-grow p-5">
-          <el-form
-            ref="formRef"
-            style="max-width: 600px"
-            :model="dynamicValidateForm"
-            label-width="auto"
-            class="demo-dynamic"
+          <form
+            name="contact-form"
             method="POST"
             data-netlify="true"
-            name="contact-form"
+            data-netlify-honeypot="bot-field"
+            onsubmit="submit"
           >
-            <input type="hidden" name="form-name" value="contact-form" />
-            <el-form-item
-              prop="name"
-              :rules="[
-                {
-                  required: true,
-                  message: 'Please input your name',
-                  trigger: 'blur',
-                },
-                {
-                  type: 'string',
-                  message: 'The name must be a string',
-                  trigger: ['blur', 'change'],
-                },
-              ]"
+            <el-form
+              ref="formRef"
+              style="max-width: 600px"
+              :model="dynamicValidateForm"
+              label-width="auto"
+              class="demo-dynamic"
             >
-              <el-input v-model="dynamicValidateForm.name" placeholder="Name*" />
-            </el-form-item>
-            <el-form-item
-              prop="email"
-              :rules="[
-                {
-                  required: true,
-                  message: 'Please input email address',
-                  trigger: 'blur',
-                },
-                {
-                  type: 'email',
-                  message: 'Please input correct email address',
-                  trigger: ['blur', 'change'],
-                },
-              ]"
-            >
-              <el-input v-model="dynamicValidateForm.email" placeholder="Email*" />
-            </el-form-item>
-            <el-form-item
-              prop="message"
-              :rules="[
-                {
-                  required: true,
-                  message: 'Please input your message',
-                  trigger: 'blur',
-                },
-                {
-                  type: 'string',
-                  message: 'The message must be a string',
-                  trigger: ['blur', 'change'],
-                },
-              ]"
-            >
-              <el-input v-model="dynamicValidateForm.message" placeholder="Message*" type="textarea" />
-            </el-form-item>
-            <el-form-item>
-              <el-button type="primary" @click="submitForm(formRef)">Submit</el-button>
-              <el-button @click="resetForm(formRef)">Reset</el-button>
-            </el-form-item>
-          </el-form>
+              <el-form-item
+                prop="name"
+                :rules="[
+                  {
+                    required: true,
+                    message: 'Please input your name',
+                    trigger: 'blur',
+                  },
+                  {
+                    type: 'string',
+                    message: 'The name must be a string',
+                    trigger: ['blur', 'change'],
+                  },
+                ]"
+              >
+                <el-input v-model="dynamicValidateForm.name" placeholder="Name*" name="name" />
+              </el-form-item>
+              <el-form-item
+                prop="email"
+                :rules="[
+                  {
+                    required: true,
+                    message: 'Please input email address',
+                    trigger: 'blur',
+                  },
+                  {
+                    type: 'email',
+                    message: 'Please input correct email address',
+                    trigger: ['blur', 'change'],
+                  },
+                ]"
+              >
+                <el-input v-model="dynamicValidateForm.email" placeholder="Email*" name="email" />
+              </el-form-item>
+              <el-form-item
+                prop="message"
+                :rules="[
+                  {
+                    required: true,
+                    message: 'Please input your message',
+                    trigger: 'blur',
+                  },
+                  {
+                    type: 'string',
+                    message: 'The message must be a string',
+                    trigger: ['blur', 'change'],
+                  },
+                ]"
+              >
+                <el-input v-model="dynamicValidateForm.message" placeholder="Message*" type="textarea" name="message" />
+              </el-form-item>
+              <el-form-item>
+                <el-button type="primary" @click="submitForm(formRef)">Submit</el-button>
+                <el-button @click="resetForm(formRef)">Reset</el-button>
+              </el-form-item>
+            </el-form>
+          </form>
           <div class="flex-shrink-0 lg:w-1/3">
             <img
               src="https://em-content.zobj.net/source/microsoft-teams/363/rocket_1f680.png"
@@ -131,6 +135,7 @@ const submitForm = (formEl: FormInstance | undefined) => {
       // axios.post('http://localhost:3000/contact', dynamicValidateForm).then(response => {
       //   console.log(response);
       // });
+      resetForm(formEl);
       setTimeout(() => {
         open2();
       }, 1000);
