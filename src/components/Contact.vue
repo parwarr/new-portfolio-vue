@@ -1,104 +1,153 @@
-<script setup>
-import { reactive } from 'vue';
-
-const formData = reactive({
-  name: '',
-  email: '',
-  message: '',
-  response: '',
-});
-
-const encode = data => {
-  return Object.keys(data)
-    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-    .join('&');
-};
-
-const submitForm = () => {
-  fetch('/', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: encode({
-      'form-name': 'feedback',
-      ...formData,
-    }),
-  })
-    .then(() => {
-      formData.response = '✅ Your response was successfully submitted!';
-    })
-    .catch(error => {
-      formData.response = `❌ There was an error submitting your response: ${error.message}. Please refresh to try again.`;
-    });
-};
-</script>
-
 <template>
-  <h1>Vue 3 + Netlify Forms</h1>
-
-  <section v-if="formData.response" class="notification">
-    <h2>{{ formData.response }}</h2>
-  </section>
-  <form v-else class="feedback-form" name="feedback" @submit.prevent>
-    <input type="hidden" name="form-name" value="feedback" />
-
-    <div class="input-wrapper">
-      <label for="name">Name</label>
-      <input id="name" v-model="formData.name" type="text" placeholder="Your Name" />
+  <div id="contact" class="text-slate-200 px-5 lg:px-20 py-10">
+    <header class="text-center">
+      <h3
+        class="font-poppins font-normal text-[#05CBEE] sm:text-[20px] text-[16px] tracking-[0.2rem] mb-[8px] text-center"
+      >
+        FEEL FREE TO REACH OUT
+      </h3>
+      <h2
+        class="font-poppins font-normal md:text-[48px] ss:text-[32px] text-[26px] text-white md:leading-[1.15] leading-[1.6] w-full z-[2] text-center mb-4"
+      >
+        Contact
+      </h2>
+    </header>
+    <div class="container mx-auto flex flex-col lg:flex-row items-center justify-center">
+      <el-card class="bg-transparent border border-slate-600 shadow-lg p-5 flex justify-center">
+        <div class="flex-grow p-5">
+          <el-form
+            ref="formRef"
+            style="max-width: 600px"
+            :model="dynamicValidateForm"
+            label-width="auto"
+            class="demo-dynamic"
+            name="contact-form"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+          >
+            <el-form-item
+              prop="name"
+              name="name"
+              :rules="[
+                {
+                  required: true,
+                  message: 'Please input your name',
+                  trigger: 'blur',
+                },
+                {
+                  type: 'string',
+                  message: 'The name must be a string',
+                  trigger: ['blur', 'change'],
+                },
+              ]"
+            >
+              <el-input v-model="dynamicValidateForm.name" placeholder="Name*" name="name" />
+            </el-form-item>
+            <el-form-item
+              prop="email"
+              name="email"
+              :rules="[
+                {
+                  required: true,
+                  message: 'Please input email address',
+                  trigger: 'blur',
+                },
+                {
+                  type: 'email',
+                  message: 'Please input correct email address',
+                  trigger: ['blur', 'change'],
+                },
+              ]"
+            >
+              <el-input v-model="dynamicValidateForm.email" placeholder="Email*" name="email" />
+            </el-form-item>
+            <el-form-item
+              prop="message"
+              name="message"
+              :rules="[
+                {
+                  required: true,
+                  message: 'Please input your message',
+                  trigger: 'blur',
+                },
+                {
+                  type: 'string',
+                  message: 'The message must be a string',
+                  trigger: ['blur', 'change'],
+                },
+              ]"
+            >
+              <el-input v-model="dynamicValidateForm.message" placeholder="Message*" type="textarea" name="message" />
+            </el-form-item>
+            <el-form-item>
+              <el-button type="primary" @click="submitForm(formRef)">Submit</el-button>
+              <el-button @click="resetForm(formRef)">Reset</el-button>
+            </el-form-item>
+          </el-form>
+          <div class="flex-shrink-0 lg:w-1/3">
+            <img
+              src="https://em-content.zobj.net/source/microsoft-teams/363/rocket_1f680.png"
+              alt="rocket"
+              class="lg:h-auto lg:max-w-xs"
+              draggable="false"
+            />
+          </div>
+        </div>
+      </el-card>
     </div>
-
-    <div class="input-wrapper">
-      <label for="email">Email</label>
-      <input id="email" v-model="formData.email" type="email" placeholder="yourname@domain.extension" />
-    </div>
-
-    <div class="input-wrapper">
-      <label for="message">Message</label>
-      <textarea id="message" v-model="formData.message" placeholder="What would you like to share?" />
-    </div>
-
-    <button type="submit" @click="submitForm">Submit</button>
-  </form>
+  </div>
 </template>
 
-<style scoped>
-.feedback-form {
-  max-width: 600px;
-  margin: 0 auto;
-}
+<script lang="ts" setup>
+import type { FormInstance } from 'element-plus';
+import { ElMessage } from 'element-plus';
 
-.input-wrapper {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  grid-row-gap: 5px;
-  margin-bottom: 1rem;
-  text-align: left;
-}
+import { reactive, ref } from 'vue';
 
-.input-wrapper:last-child {
-  margin-bottom: 0;
-}
+const formRef = ref<FormInstance>();
+const dynamicValidateForm = reactive<{
+  name: string;
+  email: string;
+  message: string;
+}>({
+  email: '',
+  name: '',
+  message: '',
+});
 
-.input-wrapper input,
-.input-wrapper textarea {
-  font-family: var(--primaryFont);
-}
+const open2 = () => {
+  ElMessage({
+    message: 'Thanks! Your Message was sent!',
+    type: 'success',
+  });
+};
 
-.input-wrapper input {
-  padding: 10px;
-  font-size: 0.9rem;
-}
+const submitForm = (formEl: FormInstance | undefined) => {
+  if (!formEl) return;
+  formEl.validate(valid => {
+    if (valid) {
+      console.log('submit!');
+      console.log(dynamicValidateForm);
 
-.input-wrapper textarea {
-  height: 100px;
-  padding: 10px;
-  font-size: 0.9rem;
-}
+      // Send form data to backend
+      // axios.post('http://localhost:3000/contact', dynamicValidateForm).then(response => {
+      //   console.log(response);
+      // });
+      setTimeout(() => {
+        open2();
+        resetForm(formEl);
+      }, 1000);
+      return true;
+    } else {
+      console.log('error submit!');
+      return false;
+    }
+  });
+};
 
-.notification {
-  border: 1px solid #222;
-  border-radius: 8px;
-  padding: 20px 0;
-  max-width: 600px;
-  margin: 0 auto;
-}
-</style>
+const resetForm = (formEl: FormInstance | undefined) => {
+  if (!formEl) return;
+  formEl.resetFields();
+};
+</script>
