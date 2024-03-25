@@ -1,7 +1,16 @@
 <template>
   <div id="experience" class="text-slate-200 px-5 lg:px-20 py-10">
     <header class="text-center">
-      <h1 class="text-4xl lg:text-6xl font-bold mb-12">Experience</h1>
+      <h3
+        class="font-poppins font-normal text-[#05CBEE] sm:text-[20px] text-[16px] tracking-[0.2rem] mb-[8px] text-center"
+      >
+        WHAT I'VE DONE SO FAR
+      </h3>
+      <h2
+        class="font-poppins font-normal md:text-[48px] ss:text-[32px] text-[26px] text-white md:leading-[1.15] leading-[1.6] w-full z-[2] text-center mb-4"
+      >
+        Professional Experience
+      </h2>
     </header>
     <div class="flex flex-col items-center">
       <el-timeline style="max-width: 900px" class="w-full" v-motion-fade>

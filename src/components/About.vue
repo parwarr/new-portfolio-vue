@@ -9,29 +9,19 @@
             <h1
               class="text-4xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.43)] flex items-center justify-center md:justify-center pb-5 text-slate-200"
             >
-              <span>Hi! I'm</span>
-              <span
-                class="ml-2 bg-gradient-to-r from-sky-300 via-blue-500 to-indigo-300 bg-clip-text font-bold text-transparent drop-shadow-[0_0_15px_rgba(50,105,235,0.43)] lg:ml-4"
-                >Parwar</span
-              >
-              <img
-                src="https://media3.giphy.com/media/U6e8Na5TJKEuDbhqpg/giphy.gif?cid=6c09b952voepgifu4xcf1y3hn11hj1mra11q97edjt55anda&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s"
-                alt="astronaut dancing"
-                class="ml-4 h-20 w-20"
-                draggable="false"
-              />
+              <span>Hi! I'm Parwar</span>
             </h1>
             <h3
               class="text-4xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-4xl font-bold dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.43)] flex items-center justify-center md:justify-center pb-5 text-slate-200"
             >
-              I am a
+              I'm a Junior
               <span
                 id="subheading"
                 class="ml-2 bg-gradient-to-r from-sky-300 via-blue-500 to-indigo-300 bg-clip-text font-bold text-transparent drop-shadow-[0_0_15px_rgba(50,105,235,0.43)] lg:ml-4"
                 >{{ typeValue }} </span
               ><span class="blinking-cursor">|</span>
             </h3>
-            <div class="flex flex-row flex-wrap justify-center pt-14">
+            <div class="flex flex-row flex-wrap justify-center">
               <el-button type="primary" size="large">
                 <a
                   href="https://drive.google.com/file/d/11D61TRL0eMEd2em5nr14CUql7PIFgXtz/view?usp=sharing"
@@ -130,7 +120,7 @@ export default {
 
 .scroll-down {
   position: absolute;
-  bottom: 40px;
+  bottom: 150px;
   left: 0;
   width: 100%;
 }
