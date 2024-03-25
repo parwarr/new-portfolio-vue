@@ -15,55 +15,27 @@
     <div class="container mx-auto flex flex-col lg:flex-row items-center justify-center">
       <el-card class="bg-transparent border border-slate-600 shadow-lg p-5 flex justify-center">
         <div class="flex-grow p-5">
-          <form name="contact" method="POST" data-netlify="true">
-            <p>
-              <label>Your Name: <input type="text" name="name" /></label>
-            </p>
-            <p>
-              <label>Your Email: <input type="email" name="email" /></label>
-            </p>
-            <p>
-              <label
-                >Your Role:
-                <select name="role[]" multiple>
-                  <option value="leader">Leader</option>
-                  <option value="follower">Follower</option>
-                </select></label
-              >
-            </p>
-            <p>
-              <label>Message: <textarea name="message"></textarea></label>
-            </p>
-            <p>
-              <button type="submit">Send</button>
-            </p>
-          </form>
-
-          <!-- <el-form
+          <el-form
             ref="formRef"
             style="max-width: 600px"
             :model="dynamicValidateForm"
             label-width="auto"
             class="demo-dynamic"
             name="contact-form"
-            method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
           >
+            <!-- Hidden form for Netlify -->
+            <form name="contact-form" netlify netlify-honeypot="bot-field" hidden>
+              <input type="text" name="name" />
+              <input type="email" name="email" />
+              <textarea name="message"></textarea>
+            </form>
+
             <el-form-item
               prop="name"
               name="name"
               :rules="[
-                {
-                  required: true,
-                  message: 'Please input your name',
-                  trigger: 'blur',
-                },
-                {
-                  type: 'string',
-                  message: 'The name must be a string',
-                  trigger: ['blur', 'change'],
-                },
+                { required: true, message: 'Please input your name', trigger: 'blur' },
+                { type: 'string', message: 'The name must be a string', trigger: ['blur', 'change'] },
               ]"
             >
               <el-input v-model="dynamicValidateForm.name" placeholder="Name*" name="name" />
@@ -72,16 +44,8 @@
               prop="email"
               name="email"
               :rules="[
-                {
-                  required: true,
-                  message: 'Please input email address',
-                  trigger: 'blur',
-                },
-                {
-                  type: 'email',
-                  message: 'Please input correct email address',
-                  trigger: ['blur', 'change'],
-                },
+                { required: true, message: 'Please input email address', trigger: 'blur' },
+                { type: 'email', message: 'Please input correct email address', trigger: ['blur', 'change'] },
               ]"
             >
               <el-input v-model="dynamicValidateForm.email" placeholder="Email*" name="email" />
@@ -90,16 +54,8 @@
               prop="message"
               name="message"
               :rules="[
-                {
-                  required: true,
-                  message: 'Please input your message',
-                  trigger: 'blur',
-                },
-                {
-                  type: 'string',
-                  message: 'The message must be a string',
-                  trigger: ['blur', 'change'],
-                },
+                { required: true, message: 'Please input your message', trigger: 'blur' },
+                { type: 'string', message: 'The message must be a string', trigger: ['blur', 'change'] },
               ]"
             >
               <el-input v-model="dynamicValidateForm.message" placeholder="Message*" type="textarea" name="message" />
@@ -108,25 +64,16 @@
               <el-button type="primary" @click="submitForm(formRef)">Submit</el-button>
               <el-button @click="resetForm(formRef)">Reset</el-button>
             </el-form-item>
-          </el-form> -->
-          <div class="flex-shrink-0 lg:w-1/3">
-            <img
-              src="https://em-content.zobj.net/source/microsoft-teams/363/rocket_1f680.png"
-              alt="rocket"
-              class="lg:h-auto lg:max-w-xs"
-              draggable="false"
-            />
-          </div>
+          </el-form>
         </div>
       </el-card>
     </div>
   </div>
 </template>
-
 <script lang="ts" setup>
+import axios from 'axios';
 import type { FormInstance } from 'element-plus';
 import { ElMessage } from 'element-plus';
-
 import { reactive, ref } from 'vue';
 
 const formRef = ref<FormInstance>();
@@ -149,23 +96,37 @@ const open2 = () => {
 
 const submitForm = (formEl: FormInstance | undefined) => {
   if (!formEl) return;
-  formEl.validate(valid => {
+  formEl.validate(async valid => {
     if (valid) {
-      console.log('submit!');
-      console.log(dynamicValidateForm);
+      // Convert form data to URL-encoded string
+      const formData = new FormData();
+      formData.append('form-name', 'contact-form'); // Important: matches the name attribute of your form
+      formData.append('name', dynamicValidateForm.name);
+      formData.append('email', dynamicValidateForm.email);
+      formData.append('message', dynamicValidateForm.message);
 
-      // Send form data to backend
-      // axios.post('http://localhost:3000/contact', dynamicValidateForm).then(response => {
-      //   console.log(response);
-      // });
-      setTimeout(() => {
+      // URL encode the form data for submission
+      const urlEncodedData = new URLSearchParams();
+      formData.forEach((value, key) => {
+        urlEncodedData.append(key, value);
+      });
+
+      try {
+        await axios({
+          method: 'post',
+          url: '/',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          data: urlEncodedData,
+        });
+
+        // Success message and form reset
         open2();
         resetForm(formEl);
-      }, 1000);
-      return true;
+      } catch (error) {
+        console.error('Submission error', error);
+      }
     } else {
-      console.log('error submit!');
-      return false;
+      console.log('Validation failed');
     }
   });
 };
