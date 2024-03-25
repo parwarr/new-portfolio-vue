@@ -22,14 +22,11 @@
             label-width="auto"
             class="demo-dynamic"
             name="contact-form"
+            method="post"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            action="/thank-you"
           >
-            <!-- Hidden form for Netlify -->
-            <form name="contact-form" netlify netlify-honeypot="bot-field" hidden>
-              <input type="text" name="name" />
-              <input type="email" name="email" />
-              <textarea name="message"></textarea>
-            </form>
-
             <el-form-item
               prop="name"
               name="name"
@@ -60,8 +57,11 @@
             >
               <el-input v-model="dynamicValidateForm.message" placeholder="Message*" type="textarea" name="message" />
             </el-form-item>
+            <input type="hidden" name="bot-field" />
+            <el-form-item></el-form-item>
             <el-form-item>
               <el-button type="primary" @click="submitForm(formRef)">Submit</el-button>
+              <button type="submit" class="el-button el-button--primary">Submit</button>
               <el-button @click="resetForm(formRef)">Reset</el-button>
             </el-form-item>
           </el-form>
