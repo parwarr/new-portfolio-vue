@@ -71,9 +71,9 @@
   </div>
 </template>
 <script lang="ts" setup>
-import axios from 'axios';
 import type { FormInstance } from 'element-plus';
 import { ElMessage } from 'element-plus';
+
 import { reactive, ref } from 'vue';
 
 const formRef = ref<FormInstance>();
@@ -96,37 +96,23 @@ const open2 = () => {
 
 const submitForm = (formEl: FormInstance | undefined) => {
   if (!formEl) return;
-  formEl.validate(async valid => {
+  formEl.validate(valid => {
     if (valid) {
-      // Convert form data to URL-encoded string
-      const formData = new FormData();
-      formData.append('form-name', 'contact-form'); // Important: matches the name attribute of your form
-      formData.append('name', dynamicValidateForm.name);
-      formData.append('email', dynamicValidateForm.email);
-      formData.append('message', dynamicValidateForm.message);
+      console.log('submit!');
+      console.log(dynamicValidateForm);
 
-      // URL encode the form data for submission
-      const urlEncodedData = new URLSearchParams();
-      formData.forEach((value, key) => {
-        urlEncodedData.append(key, value);
-      });
-
-      try {
-        await axios({
-          method: 'post',
-          url: '/',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          data: urlEncodedData,
-        });
-
-        // Success message and form reset
+      // Send form data to backend
+      // axios.post('http://localhost:3000/contact', dynamicValidateForm).then(response => {
+      //   console.log(response);
+      // });
+      setTimeout(() => {
         open2();
         resetForm(formEl);
-      } catch (error) {
-        console.error('Submission error', error);
-      }
+      }, 1000);
+      return true;
     } else {
-      console.log('Validation failed');
+      console.log('error submit!');
+      return false;
     }
   });
 };
