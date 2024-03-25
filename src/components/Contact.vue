@@ -1,101 +1,22 @@
 <template>
-  <div id="contact" class="text-slate-200 px-5 lg:px-20 py-10">
-    <header class="text-center">
-      <h3
-        class="font-poppins font-normal text-[#05CBEE] sm:text-[20px] text-[16px] tracking-[0.2rem] mb-[8px] text-center"
-      >
-        FEEL FREE TO REACH OUT
-      </h3>
-      <h2
-        class="font-poppins font-normal md:text-[48px] ss:text-[32px] text-[26px] text-white md:leading-[1.15] leading-[1.6] w-full z-[2] text-center mb-4"
-      >
-        Contact
-      </h2>
-    </header>
-    <div class="container mx-auto flex flex-col lg:flex-row items-center justify-center">
-      <el-card class="bg-transparent border border-slate-600 shadow-lg p-5 flex justify-center">
-        <div class="flex-grow p-5">
-          <el-form
-            ref="formRef"
-            style="max-width: 600px"
-            :model="dynamicValidateForm"
-            label-width="auto"
-            class="demo-dynamic"
-            name="contact-form"
-            method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-          >
-            <el-form-item
-              prop="name"
-              name="name"
-              :rules="[
-                {
-                  required: true,
-                  message: 'Please input your name',
-                  trigger: 'blur',
-                },
-                {
-                  type: 'string',
-                  message: 'The name must be a string',
-                  trigger: ['blur', 'change'],
-                },
-              ]"
-            >
-              <el-input v-model="dynamicValidateForm.name" placeholder="Name*" name="name" />
-            </el-form-item>
-            <el-form-item
-              prop="email"
-              name="email"
-              :rules="[
-                {
-                  required: true,
-                  message: 'Please input email address',
-                  trigger: 'blur',
-                },
-                {
-                  type: 'email',
-                  message: 'Please input correct email address',
-                  trigger: ['blur', 'change'],
-                },
-              ]"
-            >
-              <el-input v-model="dynamicValidateForm.email" placeholder="Email*" name="email" />
-            </el-form-item>
-            <el-form-item
-              prop="message"
-              name="message"
-              :rules="[
-                {
-                  required: true,
-                  message: 'Please input your message',
-                  trigger: 'blur',
-                },
-                {
-                  type: 'string',
-                  message: 'The message must be a string',
-                  trigger: ['blur', 'change'],
-                },
-              ]"
-            >
-              <el-input v-model="dynamicValidateForm.message" placeholder="Message*" type="textarea" name="message" />
-            </el-form-item>
-            <el-form-item>
-              <el-button type="primary" @click="submitForm(formRef)">Submit</el-button>
-              <el-button @click="resetForm(formRef)">Reset</el-button>
-            </el-form-item>
-          </el-form>
-          <div class="flex-shrink-0 lg:w-1/3">
-            <img
-              src="https://em-content.zobj.net/source/microsoft-teams/363/rocket_1f680.png"
-              alt="rocket"
-              class="lg:h-auto lg:max-w-xs"
-              draggable="false"
-            />
-          </div>
-        </div>
-      </el-card>
-    </div>
+  <div>
+    <h2>Contact Us</h2>
+    <form name="contact" method="post">
+      <input type="hidden" name="form-name" value="contact" />
+      <div>
+        <label htmlFor="name">Name</label>
+        <input type="text" id="name" name="name" />
+      </div>
+      <div>
+        <label htmlFor="email">Email</label>
+        <input type="email" id="email" name="email" />
+      </div>
+      <div>
+        <label htmlFor="message">Message</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
   </div>
 </template>
 
