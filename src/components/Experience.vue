@@ -1,5 +1,5 @@
 <template>
-  <div id="experience" class="text-slate-200 px-5 lg:px-20 py-10">
+  <div id="experience" class="text-slate-200 px-5 lg:px-20 py-10" >
     <header class="text-center">
       <h3
         class="font-poppins font-normal text-[#05CBEE] sm:text-[20px] text-[16px] tracking-[0.2rem] mb-[8px] text-center"
@@ -13,7 +13,7 @@
       </h2>
     </header>
     <div class="flex flex-col items-center">
-      <el-timeline style="max-width: 900px" class="w-full" v-motion-fade>
+      <el-timeline style="max-width: 900px" class="w-full" >
         <el-timeline-item timestamp="01/03/2024 - Present" placement="top">
           <el-card class="bg-transparent border border-slate-600 shadow-lg p-5">
             <h3 class="text-xl font-bold text-blue-500">Swisscom Schweiz AG</h3>
@@ -149,12 +149,9 @@
   </div>
 </template>
 <script>
-import { MotionPlugin } from '@vueuse/motion';
 export default {
   name: 'Experience',
-  directives: {
-    motion: MotionPlugin,
-  },
+ 
 };
 </script>
 <style>
