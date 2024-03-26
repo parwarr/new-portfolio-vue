@@ -34,7 +34,7 @@
           </div>
           <!-- Lottie Animation -->
           <div class="flex justify-center">
-            <Vue3Lottie :animationData="DeveloperJSON" :speed="1" loop autoplay class="max-w-3xl" />
+            <Vue3Lottie :animationData="DeveloperJSON" :speed="1" loop autoplay class="max-w-2xl" />
           </div>
         </div>
         <div class="scroll-down">
