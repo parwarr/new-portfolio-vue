@@ -119,8 +119,6 @@ export default {
 }
 
 .scroll-down {
-  position: absolute;
-  bottom: 150px;
   left: 0;
   width: 100%;
 }
