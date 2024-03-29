@@ -82,7 +82,7 @@ export default {
           title: 'Terminal Portfolio',
           github: 'https://github.com/parwarr/portfolio-terminal',
           demo: 'https://terminal.parwar.dev',
-          desc: 'A terminal based portfolio. With commands you can navigate through the site.',
+          desc: 'A terminal based portfolio. With Ability to navigate through the site with commands.',
           tech: ['React'],
         },
         {
