@@ -15,13 +15,13 @@
       </header>
       <div class="flex flex-col items-center justify-center mt-4">
         <p class="text-slate-400 max-w-[70ch] text-center">
-          Hello! I'm Parwar, a passionate full-stack developer with a knack for creating efficient and impactful digital
-          solutions. With expertise in languages like JavaScript, TypeScript, and SQL, and a keen interest in expanding
-          my skill set into C and C++, I'm constantly evolving in the tech sphere. My GitHub showcases projects ranging
-          from a classic TicTacToe game to a dynamic Yu-Gi-Oh search engine, reflecting my versatility and love for
-          challenges. I'm also proficient with Docker and Linux, ensuring my projects are not just innovative but also
-          resilient and scalable. While my time might be limited for private projects currently, my commitment to
-          exploring new technologies and contributing to the development community remains unwavering.
+          Hello! I'm Parwar, a passionate junior full-stack developer with a knack for creating efficient and impactful
+          digital solutions. With expertise in languages like JavaScript, TypeScript, and SQL, and a keen interest in
+          expanding my skill set into C and C++, I'm constantly evolving in the tech sphere. My GitHub showcases
+          projects ranging from a classic TicTacToe game to a dynamic Yu-Gi-Oh search engine, reflecting my versatility
+          and love for challenges. I'm also proficient with Docker and Linux, ensuring my projects are not just
+          innovative but also resilient and scalable. While my time might be limited for private projects currently, my
+          commitment to exploring new technologies and contributing to the development community remains unwavering.
         </p>
       </div>
     </div>
