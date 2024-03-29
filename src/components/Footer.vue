@@ -13,7 +13,7 @@
               </a>
             </div>
             <p class="m-0 text-base text-white">
-              <span>© 2024 Parwar Habasch. All Rights Reserved.</span>
+              <span>© 2024 Parwar Habasch</span>
             </p>
           </div>
         </div>

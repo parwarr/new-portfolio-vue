@@ -38,7 +38,7 @@
           </div>
         </div>
         <div class="scroll-down">
-          <a href="#experience" class="mouse-wrapper">
+          <a href="#aboutMeText" class="mouse-wrapper">
             <span class="mouse">
               <span class="wheel"></span>
             </span>

@@ -17,7 +17,7 @@
         <el-timeline-item timestamp="01/03/2024 - Present" placement="top">
           <el-card class="bg-transparent border border-slate-600 shadow-lg p-5">
             <h3 class="text-xl font-bold text-blue-500">Swisscom Schweiz AG</h3>
-            <h4 class="text-lg text-blue-300">Full-Stack Engineer @ DNA Data Services</h4>
+            <h4 class="text-lg text-blue-400">Full-Stack Engineer @ DNA Data Services</h4>
             <p class="text-slate-400">
               As a Fullstack Engineer I support the Atlas team in the further development of internal data web
               applications.
