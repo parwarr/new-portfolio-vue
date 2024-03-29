@@ -1,5 +1,5 @@
 <template>
-  <div id="aboutMeText" class="p-8">
+  <div id="projects" class="p-8">
     <div class="flex flex-col items-center justify-center min-h-screen">
       <header class="text-center mb-12">
         <h3
@@ -108,6 +108,13 @@ export default {
           github: 'https://github.com/parwarr/docker-container',
           desc: 'A simple bash script that creates a docker container with a few simple commands.',
           tech: ['Bash', 'Docker'],
+        },
+        {
+          id: 6,
+          image: 'https://d3upbvvdvllr10.cloudfront.net/uiresource/common-img/LIC_1.gif',
+          title: 'Want to see more?',
+          github: 'https://github.com/parwarr?tab=repositories',
+          desc: 'Check out my GitHub for more projects',
         },
       ],
     };

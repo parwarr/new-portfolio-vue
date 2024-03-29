@@ -16,11 +16,7 @@
           >
         </li>
         <li>
-          <a
-            href="https://github.com/parwarr"
-            target="_blank"
-            rel="noreferrer"
-            class="text-white hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium"
+          <a href="#projects" class="text-white hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium"
             >Projects</a
           >
         </li>
