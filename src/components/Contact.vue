@@ -12,114 +12,77 @@
         Contact
       </h2>
     </header>
-    <div class="container mx-auto flex flex-col lg:flex-row items-center justify-center">
-      <el-card class="bg-transparent border border-slate-600 shadow-lg p-5 flex justify-center">
+    <div
+      class="container mx-auto flex flex-col lg:flex-row items-center justify-center"
+    >
+      <el-card
+        class="bg-transparent border border-slate-600 shadow-lg p-5 flex justify-center"
+      >
         <div class="flex-grow p-5">
-          <!-- <el-form
-            ref="formRef"
-            style="max-width: 600px"
-            :model="dynamicValidateForm"
-            label-width="auto"
-            class="demo-dynamic"
-            name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true"
+          <form
+            name="contact"
+            method="POST"
+            netlify-honeypot="bot-field"
+            data-netlify="true"
+            class="space-y-4"
           >
-          <input type="hidden" name="contact-form" value="contact">
-            <el-form-item
-              prop="name"
-              name="name"
-              :rules="[
-                {
-                  required: true,
-                  message: 'Please input your name',
-                  trigger: 'blur',
-                },
-                {
-                  type: 'string',
-                  message: 'The name must be a string',
-                  trigger: ['blur', 'change'],
-                },
-              ]"
-            >
-              <el-input v-model="dynamicValidateForm.name" placeholder="Name*" name="name" />
-            </el-form-item>
-            <el-form-item
-              prop="email"
-              name="email"
-              :rules="[
-                {
-                  required: true,
-                  message: 'Please input email address',
-                  trigger: 'blur',
-                },
-                {
-                  type: 'email',
-                  message: 'Please input correct email address',
-                  trigger: ['blur', 'change'],
-                },
-              ]"
-            >
-              <el-input v-model="dynamicValidateForm.email" placeholder="Email*" name="email" />
-            </el-form-item>
-            <el-form-item
-              prop="subject"
-              name="subject"
-              :rules="[
-                {
-                  required: true,
-                  message: 'Please input a subject',
-                  trigger: 'blur',
-                },
-                {
-                  type: 'string',
-                  message: 'The subject must be a string',
-                  trigger: ['blur', 'change'],
-                },
-              ]"
-            >
-              <el-input v-model="dynamicValidateForm.subject" placeholder="Subject*" name="subject" />
-            </el-form-item>
-            <el-form-item
-              prop="message"
-              name="message"
-              :rules="[
-                {
-                  required: true,
-                  message: 'Please input your message',
-                  trigger: 'blur',
-                },
-                {
-                  type: 'string',
-                  message: 'The message must be a string',
-                  trigger: ['blur', 'change'],
-                },
-              ]"
-            >
-              <el-input v-model="dynamicValidateForm.message" placeholder="Message*" type="textarea" name="message" />
-            </el-form-item>
-            <el-form-item>
-              <el-button type="submit" @click="submitForm(formRef)">Submit</el-button>
-              <el-button @click="resetForm(formRef)">Reset</el-button>
-            </el-form-item>
-          </el-form> -->
-
-      <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
-      <input type="hidden" name="form-name" value="contact">
-      <p>
-        <label>Your Name: <input type="text" name="name" /></label>
-      </p>
-      <p>
-        <label>Your Subject: <input type="text" name="subject" /></label>
-      </p>
-      <p>
-        <label>Your Email: <input type="email" name="email" /></label>
-      </p>
-      <p>
-        <label>Message: <textarea name="message"></textarea></label>
-      </p>
-      <p>
-        <button type="submit">Send</button>
-      </p>
-    </form>
+            <div class="flex flex-col space-y-1">
+              <label class="text-slate-200 font-medium" for="name"
+                ></label
+              >
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Name"
+                class="p-2 rounded-md bg-transparent border border-slate-600 text-slate-200 focus:ring focus:ring-[#05CBEE] focus:border-[#05CBEE]"
+              />
+            </div>
+            <div class="flex flex-col space-y-1">
+              <label class="text-slate-200 font-medium" for="email"
+                ></label
+              >
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                class="p-2 rounded-md bg-transparent border border-slate-600 text-slate-200 focus:ring focus:ring-[#05CBEE] focus:border-[#05CBEE]"
+              />
+            </div>
+            <div class="flex flex-col space-y-1">
+              <label class="text-slate-200 font-medium" for="subject"
+                ></label
+              >
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                placeholder="Subject"
+                class="p-2 rounded-md bg-transparent border border-slate-600 text-slate-200 focus:ring focus:ring-[#05CBEE] focus:border-[#05CBEE]"
+              />
+            </div>
+            <div class="flex flex-col space-y-1">
+              <label class="text-slate-200 font-medium" for="message"
+                ></label
+              >
+              <textarea
+                name="message"
+                id="message"
+                rows="2"
+                placeholder="Message"
+                class="p-2 rounded-md bg-transparent border border-slate-600 text-slate-200 focus:ring focus:ring-[#05CBEE] focus:border-[#05CBEE]"
+              ></textarea>
+            </div>
+            <div class="flex justify-center">
+              <button
+                type="submit"
+                class="px-4 py-2 rounded-md bg-[#05CBEE] text-white hover:bg-[#03a9d4] focus:outline-none focus:ring focus:ring-[#05CBEE]"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
           <div class="flex-shrink-0 lg:w-1/3">
             <img
               src="https://em-content.zobj.net/source/microsoft-teams/363/rocket_1f680.png"
@@ -134,53 +97,4 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import type { FormInstance } from 'element-plus';
-import { ElMessage } from 'element-plus';
 
-import { reactive, ref } from 'vue';
-
-const formRef = ref<FormInstance>();
-const dynamicValidateForm = reactive<{
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}>({
-  email: '',
-  name: '',
-  subject: '',
-  message: '',
-});
-
-const open2 = () => {
-  ElMessage({
-    message: 'Thanks! Your Message was sent!',
-    type: 'success',
-  });
-};
-
-const submitForm = (formEl: FormInstance | undefined) => {
-  if (!formEl) return;
-  formEl.validate(valid => {
-    if (valid) {
-      console.log('submit!');
-
-  
-      setTimeout(() => {
-        open2();
-        resetForm(formEl);
-      }, 1000);
-      return true;
-    } else {
-      console.log('error submit!');
-      return false;
-    }
-  });
-};
-
-const resetForm = (formEl: FormInstance | undefined) => {
-  if (!formEl) return;
-  formEl.resetFields();
-};
-</script>
