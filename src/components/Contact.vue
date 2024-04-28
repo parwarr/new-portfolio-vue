@@ -21,11 +21,9 @@
             :model="dynamicValidateForm"
             label-width="auto"
             class="demo-dynamic"
-            name="contact-form"
-            method="post"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
+            name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true"
           >
+          <input type="hidden" name="contact-form" value="contact">
             <el-form-item
               prop="name"
               name="name"
@@ -61,6 +59,24 @@
               ]"
             >
               <el-input v-model="dynamicValidateForm.email" placeholder="Email*" name="email" />
+            </el-form-item>
+            <el-form-item
+              prop="subject"
+              name="subject"
+              :rules="[
+                {
+                  required: true,
+                  message: 'Please input a subject',
+                  trigger: 'blur',
+                },
+                {
+                  type: 'string',
+                  message: 'The subject must be a string',
+                  trigger: ['blur', 'change'],
+                },
+              ]"
+            >
+              <el-input v-model="dynamicValidateForm.subject" placeholder="Subject*" name="subject" />
             </el-form-item>
             <el-form-item
               prop="message"
@@ -109,10 +125,12 @@ const formRef = ref<FormInstance>();
 const dynamicValidateForm = reactive<{
   name: string;
   email: string;
+  subject: string;
   message: string;
 }>({
   email: '',
   name: '',
+  subject: '',
   message: '',
 });
 
@@ -128,12 +146,8 @@ const submitForm = (formEl: FormInstance | undefined) => {
   formEl.validate(valid => {
     if (valid) {
       console.log('submit!');
-      console.log(dynamicValidateForm);
 
-      // Send form data to backend
-      // axios.post('http://localhost:3000/contact', dynamicValidateForm).then(response => {
-      //   console.log(response);
-      // });
+  
       setTimeout(() => {
         open2();
         resetForm(formEl);
