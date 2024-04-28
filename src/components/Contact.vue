@@ -22,7 +22,7 @@
             label-width="auto"
             class="demo-dynamic"
             name="contact-form"
-            method="POST"
+            method="post"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
           >

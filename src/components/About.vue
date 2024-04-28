@@ -37,13 +37,13 @@
             <Vue3Lottie :animationData="DeveloperJSON" :speed="1" loop autoplay class="max-w-2xl" />
           </div>
         </div>
-      </div>
-      <div class="scroll-down">
-        <a href="#experience" class="mouse-wrapper">
-          <span class="mouse">
-            <span class="wheel"></span>
-          </span>
-        </a>
+        <div class="scroll-down">
+          <a href="#aboutMeText" class="mouse-wrapper">
+            <span class="mouse">
+              <span class="wheel"></span>
+            </span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -119,8 +119,6 @@ export default {
 }
 
 .scroll-down {
-  position: absolute;
-  bottom: 150px;
   left: 0;
   width: 100%;
 }

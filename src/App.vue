@@ -2,7 +2,9 @@
   <div>
     <NavBar />
     <About id="about" />
+    <AboutMeText id="aboutMeText" />
     <Experience id="experience" />
+    <Projects id="projects" />
     <Contact id="contact" />
     <el-backtop class="bg-transparent border border-blue-500 text-blue-500" :right="100" :bottom="100" />
     <Footer />
@@ -11,6 +13,7 @@
 
 <script>
 import About from './components/About.vue';
+import AboutMeText from './components/AboutMeText.vue';
 import Contact from './components/Contact.vue';
 import Experience from './components/Experience.vue';
 import Footer from './components/Footer.vue';
@@ -21,6 +24,7 @@ export default {
   name: 'App',
   components: {
     About,
+    AboutMeText,
     NavBar,
     Projects,
     Experience,
