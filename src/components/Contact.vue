@@ -27,50 +27,50 @@
             class="space-y-4"
           >
             <div class="flex flex-col space-y-1">
-              <label class="text-slate-200 font-medium" for="name"
-                ></label
+              <label class="text-slate-200 font-medium" 
+                >Name</label
               >
               <input
                 type="text"
                 name="name"
                 id="name"
-                placeholder="Name"
+                placeholder="Name*"
                 class="p-2 rounded-md bg-transparent border border-slate-600 text-slate-200 focus:ring focus:ring-[#05CBEE] focus:border-[#05CBEE]"
               />
             </div>
             <div class="flex flex-col space-y-1">
-              <label class="text-slate-200 font-medium" for="email"
-                ></label
+              <label class="text-slate-200 font-medium"
+                >Email</label
               >
               <input
                 type="email"
                 name="email"
                 id="email"
-                placeholder="Email"
+                placeholder="Email*"
                 class="p-2 rounded-md bg-transparent border border-slate-600 text-slate-200 focus:ring focus:ring-[#05CBEE] focus:border-[#05CBEE]"
               />
             </div>
             <div class="flex flex-col space-y-1">
-              <label class="text-slate-200 font-medium" for="subject"
-                ></label
+              <label class="text-slate-200 font-medium"
+                >Subject</label
               >
               <input
                 type="text"
                 name="subject"
                 id="subject"
-                placeholder="Subject"
+                placeholder="Subject*"
                 class="p-2 rounded-md bg-transparent border border-slate-600 text-slate-200 focus:ring focus:ring-[#05CBEE] focus:border-[#05CBEE]"
               />
             </div>
             <div class="flex flex-col space-y-1">
-              <label class="text-slate-200 font-medium" for="message"
-                ></label
+              <label class="text-slate-200 font-medium"
+                >Message</label
               >
               <textarea
                 name="message"
                 id="message"
                 rows="2"
-                placeholder="Message"
+                placeholder="Message*"
                 class="p-2 rounded-md bg-transparent border border-slate-600 text-slate-200 focus:ring focus:ring-[#05CBEE] focus:border-[#05CBEE]"
               ></textarea>
             </div>
