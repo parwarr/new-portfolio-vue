@@ -24,64 +24,23 @@
             method="POST"
             netlify-honeypot="bot-field"
             data-netlify="true"
-            class="space-y-4"
           >
-            <div class="flex flex-col space-y-1">
-              <label class="text-slate-200 font-medium" 
-                >Name</label
-              >
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Name*"
-                class="p-2 rounded-md bg-transparent border border-slate-600 text-slate-200 focus:ring focus:ring-[#05CBEE] focus:border-[#05CBEE]"
-              />
-            </div>
-            <div class="flex flex-col space-y-1">
-              <label class="text-slate-200 font-medium"
-                >Email</label
-              >
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Email*"
-                class="p-2 rounded-md bg-transparent border border-slate-600 text-slate-200 focus:ring focus:ring-[#05CBEE] focus:border-[#05CBEE]"
-              />
-            </div>
-            <div class="flex flex-col space-y-1">
-              <label class="text-slate-200 font-medium"
-                >Subject</label
-              >
-              <input
-                type="text"
-                name="subject"
-                id="subject"
-                placeholder="Subject*"
-                class="p-2 rounded-md bg-transparent border border-slate-600 text-slate-200 focus:ring focus:ring-[#05CBEE] focus:border-[#05CBEE]"
-              />
-            </div>
-            <div class="flex flex-col space-y-1">
-              <label class="text-slate-200 font-medium"
-                >Message</label
-              >
-              <textarea
-                name="message"
-                id="message"
-                rows="2"
-                placeholder="Message*"
-                class="p-2 rounded-md bg-transparent border border-slate-600 text-slate-200 focus:ring focus:ring-[#05CBEE] focus:border-[#05CBEE]"
-              ></textarea>
-            </div>
-            <div class="flex justify-center">
-              <button
-                type="submit"
-                class="px-4 py-2 rounded-md bg-[#05CBEE] text-white hover:bg-[#03a9d4] focus:outline-none focus:ring focus:ring-[#05CBEE]"
-              >
-                Submit
-              </button>
-            </div>
+            <input type="hidden" name="form-name" value="contact" />
+            <p>
+              <label>Name<input type="text" name="name" /></label>
+            </p>
+            <p>
+              <label>Email<input type="email" name="email" /></label>
+            </p>
+            <p>
+              <label>Subject<input type="text" name="subject" /></label>
+            </p>
+            <p>
+              <label>Message<textarea name="message"></textarea></label>
+            </p>
+            <p>
+              <button type="submit">Send</button>
+            </p>
           </form>
           <div class="flex-shrink-0 lg:w-1/3">
             <img
@@ -97,4 +56,52 @@
   </div>
 </template>
 
+<script lang="ts" setup>
+import type { FormInstance } from 'element-plus';
+import { ElMessage } from 'element-plus';
 
+import { reactive, ref } from 'vue';
+
+const formRef = ref<FormInstance>();
+const dynamicValidateForm = reactive<{
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}>({
+  email: '',
+  name: '',
+  subject: '',
+  message: '',
+});
+
+const open2 = () => {
+  ElMessage({
+    message: 'Thanks! Your Message was sent!',
+    type: 'success',
+  });
+};
+
+const submitForm = (formEl: FormInstance | undefined) => {
+  if (!formEl) return;
+  formEl.validate((valid) => {
+    if (valid) {
+      console.log('submit!');
+
+      setTimeout(() => {
+        open2();
+        resetForm(formEl);
+      }, 1000);
+      return true;
+    } else {
+      console.log('error submit!');
+      return false;
+    }
+  });
+};
+
+const resetForm = (formEl: FormInstance | undefined) => {
+  if (!formEl) return;
+  formEl.resetFields();
+};
+</script>
