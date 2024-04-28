@@ -15,7 +15,7 @@
     <div class="container mx-auto flex flex-col lg:flex-row items-center justify-center">
       <el-card class="bg-transparent border border-slate-600 shadow-lg p-5 flex justify-center">
         <div class="flex-grow p-5">
-          <el-form
+          <!-- <el-form
             ref="formRef"
             style="max-width: 600px"
             :model="dynamicValidateForm"
@@ -97,10 +97,29 @@
               <el-input v-model="dynamicValidateForm.message" placeholder="Message*" type="textarea" name="message" />
             </el-form-item>
             <el-form-item>
-              <el-button type="primary" @click="submitForm(formRef)">Submit</el-button>
+              <el-button type="submit" @click="submitForm(formRef)">Submit</el-button>
               <el-button @click="resetForm(formRef)">Reset</el-button>
             </el-form-item>
-          </el-form>
+          </el-form> -->
+
+      <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact">
+      <p>
+        <label>Your Name: <input type="text" name="name" /></label>
+      </p>
+      <p>
+        <label>Your Subject: <input type="text" name="subject" /></label>
+      </p>
+      <p>
+        <label>Your Email: <input type="email" name="email" /></label>
+      </p>
+      <p>
+        <label>Message: <textarea name="message"></textarea></label>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    </form>
           <div class="flex-shrink-0 lg:w-1/3">
             <img
               src="https://em-content.zobj.net/source/microsoft-teams/363/rocket_1f680.png"
