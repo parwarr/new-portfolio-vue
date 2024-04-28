@@ -6,23 +6,29 @@
       </div>
       <ul class="flex items-center space-x-1">
         <li>
-          <a href="#aboutMeText" class="text-white hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium"
+          <a
+            href="#aboutMeText"
+            class="text-white hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium"
             >About</a
           >
         </li>
         <li>
-          <a href="#experience" class="text-white hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium"
+          <a
+            href="#experience"
+            class="text-white hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium"
             >Experience</a
           >
         </li>
         <li>
-          <a href="#projects" class="text-white hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium"
+          <a
+            href="#projects"
+            class="text-white hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium"
             >Projects</a
           >
         </li>
-        <li>
+        <!-- <li>
           <a href="#contact" class="text-white hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
-        </li>
+        </li> -->
       </ul>
     </nav>
   </header>

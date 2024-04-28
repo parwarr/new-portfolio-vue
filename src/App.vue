@@ -5,8 +5,12 @@
     <AboutMeText id="aboutMeText" />
     <Experience id="experience" />
     <Projects id="projects" />
-    <Contact id="contact" />
-    <el-backtop class="bg-transparent border border-blue-500 text-blue-500" :right="100" :bottom="100" />
+    <!-- <Contact id="contact" /> -->
+    <el-backtop
+      class="bg-transparent border border-blue-500 text-blue-500"
+      :right="100"
+      :bottom="100"
+    />
     <Footer />
   </div>
 </template>
