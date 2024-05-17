@@ -15,44 +15,49 @@
     <div
       class="container mx-auto flex flex-col lg:flex-row items-center justify-center"
     >
-      <el-card
-        class="bg-transparent border border-slate-600 shadow-lg p-5 flex justify-center"
-      >
-        <div class="flex-grow p-5">
-          <form
-            name="contact"
-            method="POST"
-            netlify-honeypot="bot-field"
-            data-netlify="true"
-          >
-            <input type="hidden" name="form-name" value="contact" />
-            <p>
-              <label>Name<input type="text" name="name" /></label>
-            </p>
-            <p>
-              <label>Email<input type="email" name="email" /></label>
-            </p>
-            <p>
-              <label>Subject<input type="text" name="subject" /></label>
-            </p>
-            <p>
-              <label>Message<textarea name="message"></textarea></label>
-            </p>
-            <p>
-              <button type="submit">Send</button>
-            </p>
-          </form>
+      <div class="flex flex-col items-center justify-center mt-4">
+        <p class="text-slate-400 max-w-[70ch] text-center">
+          Feel free to send me a message if you are interested in getting in touch. You can reach me through <a href="https://www.linkedin.com/in/parwar-h-6a48a226b/" target="_blank" class="font-poppins font-normal text-[#05CBEE]">LinkedIn</a> or directly via <a href="mailto:parwar.habasch@gmx.de" target="_blank" class="font-poppins font-normal text-[#05CBEE]">E-Mail</a>.<br/> If you are curious about my further development, you can follow me on <a href="https://github.com/parwarr" target="_blank" class="font-poppins font-normal text-[#05CBEE]">Github</a>.
+        </p>
+      </div>
+<!--      <el-card-->
+<!--        class="bg-transparent border border-slate-600 shadow-lg p-5 flex justify-center"-->
+<!--      >-->
+<!--        <div class="flex-grow p-5">-->
+<!--          <form-->
+<!--            name="contact"-->
+<!--            method="POST"-->
+<!--            netlify-honeypot="bot-field"-->
+<!--            data-netlify="true"-->
+<!--          >-->
+<!--            <input type="hidden" name="form-name" value="contact" />-->
+<!--            <p>-->
+<!--              <label>Name<input type="text" name="name" /></label>-->
+<!--            </p>-->
+<!--            <p>-->
+<!--              <label>Email<input type="email" name="email" /></label>-->
+<!--            </p>-->
+<!--            <p>-->
+<!--              <label>Subject<input type="text" name="subject" /></label>-->
+<!--            </p>-->
+<!--            <p>-->
+<!--              <label>Message<textarea name="message"></textarea></label>-->
+<!--            </p>-->
+<!--            <p>-->
+<!--              <button type="submit">Send</button>-->
+<!--            </p>-->
+<!--          </form>-->
 
-          <div class="flex-shrink-0 lg:w-1/3">
-            <img
-              src="https://em-content.zobj.net/source/microsoft-teams/363/rocket_1f680.png"
-              alt="rocket"
-              class="lg:h-auto lg:max-w-xs"
-              draggable="false"
-            />
-          </div>
-        </div>
-      </el-card>
+<!--          <div class="flex-shrink-0 lg:w-1/3">-->
+<!--            <img-->
+<!--              src="https://em-content.zobj.net/source/microsoft-teams/363/rocket_1f680.png"-->
+<!--              alt="rocket"-->
+<!--              class="lg:h-auto lg:max-w-xs"-->
+<!--              draggable="false"-->
+<!--            />-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </el-card>-->
     </div>
   </div>
 </template>

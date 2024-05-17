@@ -26,9 +26,9 @@
             >Projects</a
           >
         </li>
-        <!-- <li>
+        <li>
           <a href="#contact" class="text-white hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
-        </li> -->
+        </li>
       </ul>
     </nav>
   </header>
