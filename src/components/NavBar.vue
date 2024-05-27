@@ -1,8 +1,10 @@
 <template>
-  <header class="relative top-0 left-0 z-10 w-full">
+  <header class="top-0 left-0 z-10 w-full sticky bg-slate-900 bg-opacity-15">
     <nav class="flex items-center justify-between max-w-7xl mx-auto p-4">
       <div>
+        <a href="#about">
         <img src="../assets/logo.png" alt="logo" class="h-16 w-20" />
+      </a>
       </div>
       <ul class="flex items-center space-x-1">
         <li>

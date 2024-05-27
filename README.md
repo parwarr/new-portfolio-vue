@@ -3,3 +3,4 @@ TODO:
 - Add animations
 - Make page responsive
 - Update projects section
+- Update current resume link with new one
