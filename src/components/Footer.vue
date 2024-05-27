@@ -6,10 +6,13 @@
           <div class="footer-text">
             <div class="social-icons mt-4 mb-2">
               <a href="https://www.linkedin.com/in/parwar-h-6a48a226b" target="_blank" class="mx-2">
-                <i class="fab fa-linkedin text-white text-2xl"></i>
+                <i class="fab fa-linkedin text-white text-2xl"/>
               </a>
               <a href="https://github.com/parwarr" target="_blank" class="mx-2">
-                <i class="fab fa-github text-white text-2xl"></i>
+                <i class="fab fa-github text-white text-2xl"/>
+              </a>
+              <a href="https://leetcode.com/u/parwarr" target="_blank" class="mx-2">
+                  <CIcon class="h-6 bg-white rounded-lg" :icon="cibLeetcode"/>
               </a>
             </div>
             <p class="m-0 text-base text-white">
@@ -22,12 +25,29 @@
   </footer>
 </template>
 <script>
+import { cibLeetcode } from '@coreui/icons';
+import { CIcon } from '@coreui/icons-vue';
+
 export default {
   name: 'Footer',
+  components: {
+    CIcon
+  },
+  setup() {
+    return {
+      cibLeetcode,
+    }
+  }
 };
 </script>
 
 <style>
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 .social-icons a {
   transition: transform 0.2s ease-in-out;
 }
