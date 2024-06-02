@@ -1,5 +1,5 @@
 <template>
-  <header class="top-0 left-0 z-10 w-full sticky bg-slate-900 bg-opacity-15">
+  <header class="top-0 left-0 z-10 w-full">
     <nav class="flex items-center justify-between max-w-7xl mx-auto p-4">
       <div>
         <a href="#about">
