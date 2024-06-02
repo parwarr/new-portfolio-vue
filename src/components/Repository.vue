@@ -21,10 +21,10 @@
       <div class="flex items-center space-x-4 text-xs text-gray-400 mt-2">
         <span>{{ repository.language }}</span>
         <span class="flex items-center">
-          <i class="fas fa-star"></i> {{ repository.stargazers_count }}
+          <i class="fas fa-star mr-1"></i> {{ repository.stargazers_count }}
         </span>
         <span class="flex items-center">
-          <i class="fas fa-code-branch"></i> {{ repository.forks_count }}
+          <i class="fas fa-code-branch mr-1"></i> {{ repository.forks_count }}
         </span>
       </div>
     </div>
