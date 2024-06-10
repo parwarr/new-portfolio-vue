@@ -47,7 +47,11 @@ export default {
   },
   methods: {
     loadRepos() {
-      axios.get("https://api.github.com/users/parwarr/repos").then((res) => {
+      axios.get("https://api.github.com/users/parwarr/repos", {
+        headers: {
+          'Accept': 'application/vnd.github+json'
+        }
+      }).then((res) => {
         this.repos = res.data.filter(project => [
           'portfolio-terminal',
           'yugioh-search-engine-demo-frontend',

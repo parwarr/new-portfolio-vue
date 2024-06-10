@@ -24,7 +24,7 @@
             <div class="flex flex-row flex-wrap justify-center">
               <el-button type="primary" size="large">
                 <a
-                  href="https://drive.google.com/file/d/11D61TRL0eMEd2em5nr14CUql7PIFgXtz/view?usp=sharing"
+                  href="https://drive.proton.me/urls/FA7PJGXBKR#pusQHNKR50yL"
                   target="_blank"
                   >Resume</a
                 ></el-button
