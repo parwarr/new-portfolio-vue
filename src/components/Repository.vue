@@ -33,7 +33,6 @@
 
 <script>
 import axios from "axios";
-
 export default {
   name: "Repository",
   data() {
@@ -47,9 +46,12 @@ export default {
   },
   methods: {
     loadRepos() {
+      const token = import.meta.env.VITE_GITHUB_TOKEN
+
       axios.get("https://api.github.com/users/parwarr/repos", {
         headers: {
-          'Accept': 'application/vnd.github+json'
+          'Accept': 'application/vnd.github+json',
+          'Authorization': `Bearer ${token}`
         }
       }).then((res) => {
         this.repos = res.data.filter(project => [
