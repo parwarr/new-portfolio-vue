@@ -7,5 +7,9 @@ import Vue3Lottie from 'vue3-lottie';
 import Particles from 'vue3-particles';
 import App from './App.vue';
 import './index.css';
-
-createApp(App).use(Particles, Vue3Lottie, ElementPlus, MotionPlugin).mount('#app');
+const app = createApp(App);
+app.use(Particles);
+app.use(MotionPlugin);
+app.use(Vue3Lottie);
+app.use(ElementPlus);
+app.mount('#app');
