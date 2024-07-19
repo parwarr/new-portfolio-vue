@@ -24,7 +24,7 @@
           </div>
           <div class="flex justify-center">
             <img
-              class="rounded-full size-52 transition ease-in-out delay-250 grayscale hover:-translate-y-1 hover:grayscale-0 duration-300"
+              class="rounded-full size-52 transition ease-in-out duration-1000 delay-250 grayscale-[60%] hover:-translate-y-1 hover:grayscale-0 hover:border-4 border-blue-500"
               src="../assets/ProfilePicture.jpeg"
               alt="Profile Picture"
             />
