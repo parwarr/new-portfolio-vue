@@ -5,7 +5,7 @@
     <div class="container mx-auto">
       <div class="flex flex-wrap justify-center">
         <div class="w-full lg:w-2/3 mx-auto">
-          <div>
+          <div class="relative">
             <h2
               class="min-[320px]:text-[2rem] md:text-2xl lg:text-6xl font-bold dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.43)] flex items-center justify-center md:justify-center pb-5 text-slate-200"
             >
@@ -22,13 +22,15 @@
               ><span class="blinking-cursor">|</span>
             </h3>
           </div>
-          <div class="flex justify-center">
+          <div class="flex justify-center relative">
+            <img class="helmet z-10" src="../assets/helmet.png" alt="Helmet" />
             <img
-              class="rounded-full size-52 transition ease-in-out duration-1000 delay-250 grayscale-[60%] hover:-translate-y-1 hover:grayscale-0 hover:border-4 border-blue-500"
+              class="profile-picture rounded-full transition ease-in-out duration-1000 delay-250 grayscale-[60%] hover:grayscale-0 hover:border-4 border-blue-500 z-20"
               src="../assets/ProfilePicture.jpeg"
               alt="Profile Picture"
             />
           </div>
+
           <div class="flex flex-row flex-wrap justify-center py-4">
             <el-button type="primary" size="large">
               <a
@@ -147,6 +149,17 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Oswald');
+
+.helmet {
+  width: 220px;
+  height: auto;
+}
+
+.profile-picture {
+  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+  width: 150px;
+  height: 150px;
+}
 
 .scroll-down {
   left: 0;
