@@ -65,7 +65,7 @@
       },
       {
         "title": "Remove Apple ID before erasing Mac",
-        "description": "Automated the loggout process in case of erasing the Mac."
+        "description": "Automated the logout process in case of erasing the Mac."
       },
       {
         "title": "Reactivate FileVault on Mac",
