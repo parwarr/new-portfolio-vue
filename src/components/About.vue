@@ -25,7 +25,7 @@
           <div class="flex justify-center relative">
             <img class="helmet z-10" src="../assets/helmet.png" alt="Helmet" />
             <img
-              class="profile-picture rounded-full transition ease-in-out duration-1000 delay-250 grayscale-[60%] hover:grayscale-0 hover:border-4 border-blue-500 z-20"
+              class="profile-picture rounded-full transition ease-in-out duration-1000 delay-250 grayscale-[60%] hover:grayscale-0 hover:border-4 border-blue-500 z-20 hover:scale-110"
               src="../assets/ProfilePicture.jpeg"
               alt="Profile Picture"
             />
