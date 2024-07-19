@@ -2,7 +2,7 @@
   <div>
     <NavBar />
     <About id="about" />
-    <AboutMeText id="aboutMeText" />
+    <!-- <AboutMeText id="aboutMeText" /> -->
     <Experience id="experience" />
     <Projects id="projects" />
      <Contact id="contact" />
