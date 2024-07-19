@@ -25,31 +25,37 @@
               class="bg-transparent border border-slate-600 shadow-lg p-5"
             >
               <template v-if="experiencesProjectsId !== experience.id">
-                <h3 class="text-xl font-bold text-blue-500">
-                  {{ experience.company }}
-                </h3>
-                <h4 class="text-lg text-blue-400">{{ experience.position }}</h4>
-                <p class="text-slate-400">{{ experience.description }}</p>
-                <div class="">
-                  <h3 class="py-3 mr-2 text-blue-500 font-bold text-nowrap">
-                    Technologies used:
+                <div v-motion-roll-visible-left>
+                  <h3 class="text-xl font-bold text-blue-500">
+                    {{ experience.company }}
                   </h3>
-                  <div class="flex gap-2 font-bold flex-row flex-wrap max-w-56">
-                    <el-tag
-                      v-for="technology in experience.technologies"
-                      :key="technology"
-                      class="bg-transparent border border-blue-500 text-white rounded-full text-sm"
-                    >
-                      {{ technology }}
-                    </el-tag>
-                  </div>
-                  <div class="relative">
+                  <h4 class="text-lg text-blue-400">
+                    {{ experience.position }}
+                  </h4>
+                  <p class="text-slate-400">{{ experience.description }}</p>
+                  <div class="">
+                    <h3 class="py-3 mr-2 text-blue-500 font-bold text-nowrap">
+                      Technologies used:
+                    </h3>
                     <div
-                      v-if="experience.projects && experience.projects.length"
-                      @click="onClickProjects(experience.id)"
-                      class="absolute bottom-0 right-0 underline cursor-pointer text-blue-500"
+                      class="flex gap-2 font-bold flex-row flex-wrap max-w-52 md:max-w-[35rem] lg:max-w-[40rem]"
                     >
-                      Show Projects
+                      <el-tag
+                        v-for="technology in experience.technologies"
+                        :key="technology"
+                        class="bg-transparent border border-blue-500 text-white rounded-full text-sm"
+                      >
+                        {{ technology }}
+                      </el-tag>
+                    </div>
+                    <div class="relative">
+                      <div
+                        v-if="experience.projects && experience.projects.length"
+                        @click="onClickProjects(experience.id)"
+                        class="absolute bottom-0 right-0 underline cursor-pointer text-blue-500"
+                      >
+                        Show Projects
+                      </div>
                     </div>
                   </div>
                 </div>
