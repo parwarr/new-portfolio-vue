@@ -15,7 +15,7 @@
     <div class="flex flex-col items-center">
       <MotionGroup preset="slideVisibleLeft" :duration="600">
         <el-timeline style="max-width: 900px" class="w-full">
-          <el-timeline-item timestamp="01/03/2024 - Present" placement="top">
+          <el-timeline-item timestamp="01/03/2024 - 31/07/2024" placement="top">
             <el-card
               class="bg-transparent border border-slate-600 shadow-lg p-5"
             >
@@ -31,7 +31,7 @@
               </p>
               <div class="flex flex-row mt-4">
                 <h3 class="mr-2 text-blue-500 font-bold text-nowrap">
-                  Technologies using:
+                  Technologies used:
                 </h3>
                 <div class="flex gap-2 font-bold">
                   <el-tag
