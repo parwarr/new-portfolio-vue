@@ -25,16 +25,32 @@
               class="bg-transparent border border-slate-600 shadow-lg p-5"
             >
               <template v-if="experiencesProjectsId !== experience.id">
-                <div v-motion-roll-visible-left>
+                <div
+                  v-motion
+                  :initial="{
+                    y: 100,
+                    opacity: 0,
+                  }"
+                  :enter="{
+                    y: 0,
+                    opacity: 1,
+                    transition: {
+                      type: 'spring',
+                      stiffness: 130,
+                      damping: 25,
+                      mass: 0.5,
+                    },
+                  }"
+                >
                   <h3 class="text-xl font-bold text-blue-500">
                     {{ experience.company }}
                   </h3>
-                  <h4 class="text-lg text-blue-400">
+                  <h4 class="text-lg text-blue-300">
                     {{ experience.position }}
                   </h4>
                   <p class="text-slate-400">{{ experience.description }}</p>
                   <div class="">
-                    <h3 class="py-3 mr-2 text-blue-500 font-bold text-nowrap">
+                    <h3 class="py-3 mr-2 text-blue-400 font-bold text-nowrap">
                       Technologies used:
                     </h3>
                     <div
@@ -43,7 +59,7 @@
                       <el-tag
                         v-for="technology in experience.technologies"
                         :key="technology"
-                        class="bg-transparent border border-blue-500 text-white rounded-full text-sm"
+                        class="bg-transparent border border-blue-400 text-white rounded-full text-sm"
                       >
                         {{ technology }}
                       </el-tag>
@@ -61,7 +77,23 @@
                 </div>
               </template>
               <template v-else>
-                <div v-motion-roll-visible-right>
+                <div
+                  v-motion
+                  :initial="{
+                    y: 100,
+                    opacity: 0,
+                  }"
+                  :enter="{
+                    y: 0,
+                    opacity: 1,
+                    transition: {
+                      type: 'spring',
+                      stiffness: 130,
+                      damping: 25,
+                      mass: 0.5,
+                    },
+                  }"
+                >
                   <div
                     v-for="project in experience.projects"
                     :key="project.title"
