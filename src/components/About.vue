@@ -11,7 +11,7 @@
             >
               <span>Hi! I'm Parwar</span>
             </h2>
-            <h3
+            <!-- <h3
               class="min-[320px]:text-[1.2rem] text-4xl md:text-2xl lg:text-3xl font-bold dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.43)] flex items-center justify-center md:justify-center pb-5 text-slate-200"
             >
               I'm a Junior
@@ -20,7 +20,7 @@
                 class="ml-2 bg-gradient-to-r from-sky-300 via-blue-500 to-indigo-300 bg-clip-text font-bold text-transparent drop-shadow-[0_0_15px_rgba(50,105,235,0.43)] lg:ml-4"
                 >{{ typeValue }} </span
               ><span class="blinking-cursor">|</span>
-            </h3>
+            </h3> -->
           </div>
           <div class="flex justify-center relative">
             <img class="helmet z-10" src="../assets/helmet.png" alt="Helmet" />
