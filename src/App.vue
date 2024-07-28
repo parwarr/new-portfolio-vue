@@ -4,8 +4,9 @@
     <About id="about" />
     <!-- <AboutMeText id="aboutMeText" /> -->
     <Experience id="experience" />
+    <CurrProjects id="currProjects" />
     <Projects id="projects" />
-     <Contact id="contact" />
+    <Contact id="contact" />
     <el-backtop
       class="bg-transparent border border-blue-500 text-blue-500"
       :right="100"
@@ -23,6 +24,7 @@ import Experience from './components/Experience.vue';
 import Footer from './components/Footer.vue';
 import NavBar from './components/NavBar.vue';
 import Projects from './components/Projects.vue';
+import CurrProjects from './components/CurrProjects.vue';
 import './style.css';
 export default {
   name: 'App',
@@ -34,6 +36,7 @@ export default {
     Experience,
     Footer,
     Contact,
+    CurrProjects,
   },
 };
 </script>
