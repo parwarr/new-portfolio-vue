@@ -1,13 +1,11 @@
 <script setup>
 import { loadFull } from 'tsparticles';
 
-const particlesInit = async engine => {
+const particlesInit = async (engine) => {
   await loadFull(engine);
 };
 
-const particlesLoaded = async container => {
-  console.log('Particles container loaded', container);
-};
+const particlesLoaded = async (container) => {};
 </script>
 
 <template>

@@ -16,16 +16,16 @@
           Currently Working On
         </h2>
       </header>
-      <div class="demo-collapse">
-        <el-collapse accordion>
-          <el-collapse-item title="Feedback" name="1">
+      <div>
+        <el-collapse accordion class="">
+          <el-collapse-item
+            v-for="currProjects in ongoingProjects"
+            :key="currProjects.id"
+            :title="currProjects.title"
+            :name="currProjects.id"
+          >
             <div>
-              Operation feedback: enable the users to clearly perceive their
-              operations by style updates and interactive effects;
-            </div>
-            <div>
-              Visual feedback: reflect current state by updating or rearranging
-              elements of the page.
+              {{ currProjects.description }}
             </div>
           </el-collapse-item>
         </el-collapse>
@@ -34,6 +34,16 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { InfoFilled } from '@element-plus/icons-vue';
+<script>
+import ongoingProjects from '../data/ongoingProjects.json';
+export default {
+  name: 'CurrProjects',
+  data() {
+    return {
+      ongoingProjects,
+    };
+  },
+};
 </script>
+
+<style></style>

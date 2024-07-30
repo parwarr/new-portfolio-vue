@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Kuberenetes KCDA Certification",
+    "description": "Based on the KCDA courses Im currently completing the official KCDA Certification"
+  },
+  {
+    "id": 2,
+    "title": "Website for LocoBroko.net",
+    "description": "As the two German Influencer HamedLoco and Berkoli planing to publish their own Minecraft server Im currently developing their Website for the upcoming Minecraft Server."
+  },
+  {
+    "id": 3,
+    "title": "Java",
+    "description": "As Im intrested in learning Java Im currently looking into its basics and advanced stuff, if I will actually use it in the futere will be my future self problem. :)"
+  },
+  {
+    "id": 4,
+    "title": "Problem Solving skills",
+    "description": "As Im trying to improve my self 1% better as the day before Im investigating much time into improving my problem solving skill set because I think this will be a key skill for me. I try to work on new projects and solve code problems on leetcode or similar websites."
+  }
+]
