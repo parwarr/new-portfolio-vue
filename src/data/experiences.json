@@ -17,11 +17,7 @@
     "projects": [
       {
         "title": "Swisscom Data Console",
-        "description": "Swisscom Data Console is an interal tool to work with big data, we maintained and developed the GUI for it, so there is a user friendly interaction available. There I have worked to implement different features, fix bugs and make the platform an better website."
-      },
-      {
-        "title": "Compass",
-        "description": "Is a fork of the offical open-source application that was adjusted to use it for interacting with internal big data."
+        "description": "Swisscom Data Console is an interal tool to work with big data, we maintained and developed the frontend for it, so there is a user friendly interaction available. There I have worked to implement different features, fix bugs and make the platform an better website."
       }
     ]
   },
@@ -43,7 +39,7 @@
     "projects": [
       {
         "title": "Swisscom Event Planning Tool",
-        "description": "This project involved creating a website to display various upcoming events. The goal was to place these displays at the entrance of the offices, allowing employees to view upcoming events. I worked entirely independently on this customer project. To achieve this, I planned a comprehensive database schema, which formed the foundation for developing the backend of the website. The backend was built using NestJS and PrismaORM, with API documentation created using Swagger. Once the backend was complete, I developed the frontend based on mockups provided by the designers. The frontend was built using React, Tailwind CSS, and TypeScript."
+        "description": "This project involved creating a webapp to display various upcoming events. The goal was to place these displays at the entrance of the offices, allowing employees to view upcoming events. I worked entirely independently on this customer project. To achieve this, I planned a comprehensive database schema, which formed the foundation for developing the backend of the website. The backend was built using NestJS and PrismaORM, with API documentation created using Swagger. Once the backend was complete, I developed the frontend based on mockups provided by the designers. The frontend was built using React, Tailwind CSS, and TypeScript."
       }
     ]
   },
