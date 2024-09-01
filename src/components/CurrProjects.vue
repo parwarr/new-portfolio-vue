@@ -16,8 +16,8 @@
           Currently Working On
         </h2>
       </header>
-      <div>
-        <el-collapse accordion class="">
+      <div class="demo-collapse">
+        <el-collapse v-model="activeNames" @change="handleChange">
           <el-collapse-item
             v-for="currProjects in ongoingProjects"
             :key="currProjects.id"
@@ -36,12 +36,22 @@
 
 <script>
 import ongoingProjects from '../data/ongoingProjects.json';
+import { ref } from 'vue';
+
 export default {
   name: 'CurrProjects',
   data() {
     return {
       ongoingProjects,
     };
+  },
+  methods: {
+    activeNames() {
+      ref(['1']);
+    },
+    handleChange(val) {
+      console.log(val);
+    },
   },
 };
 </script>
