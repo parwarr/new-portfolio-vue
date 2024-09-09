@@ -32,12 +32,12 @@
           </div>
 
           <div class="flex flex-row flex-wrap justify-center py-4">
-            <el-button type="primary" size="large">
+            <!-- <el-button type="primary" size="large">
               <a
                 href="https://drive.proton.me/urls/FA7PJGXBKR#pusQHNKR50yL"
                 target="_blank"
                 >Resume</a
-              ></el-button
+              ></el-button -->
             >
             <el-button type="primary" size="large"
               ><a href="mailto:parwar.habasch@gmx.de">Hire Me</a></el-button
