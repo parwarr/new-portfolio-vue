@@ -4,7 +4,16 @@
     "company": "Swisscom Schweiz AG",
     "position": "DevOpsEngineerr @ Analytics for B2B",
     "timestamp": "01/08/2024 - Present",
-    "description": ""
+    "description": "",
+    "technologies": [
+      "Docker",
+      "Kubernetes",
+      "Elastic",
+      "Splunk",
+      "Bash",
+      "Linux",
+      "Python"
+    ]
   },
   {
     "id": 2,
