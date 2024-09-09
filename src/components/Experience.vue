@@ -49,7 +49,12 @@
                     {{ experience.position }}
                   </h4>
                   <p class="text-slate-400">{{ experience.description }}</p>
-                  <div class="">
+                  <div
+                    v-if="
+                      experience.technologies &&
+                      experience.technologies.length > 0
+                    "
+                  >
                     <h3 class="py-3 mr-2 text-blue-400 font-bold text-nowrap">
                       Technologies used:
                     </h3>

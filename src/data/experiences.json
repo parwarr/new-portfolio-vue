@@ -2,6 +2,20 @@
   {
     "id": 1,
     "company": "Swisscom Schweiz AG",
+    "position": "DevOpsEngineerr @ Analytics for B2B",
+    "timestamp": "01/08/2024 - Present",
+    "description": ""
+  },
+  {
+    "id": 2,
+    "company": "Swisscom Schweiz AG",
+    "position": "Apprenticeship",
+    "timestamp": "01/03/2024 - 31/07/2024",
+    "description": "Throughout the apprenticeship I was able to work in different areas of fields where I was able to gain and learn many new skills."
+  },
+  {
+    "id": 3,
+    "company": "Swisscom Schweiz AG",
     "position": "Full-Stack Engineer @ DNA Data Services",
     "timestamp": "01/03/2024 - 31/07/2024",
     "description": "As a Fullstack Engineer I support the Atlas team in the further development of internal data web applications.",
@@ -17,16 +31,12 @@
     "projects": [
       {
         "title": "Swisscom Data Console",
-        "description": "Swisscom Data Console is an interal tool to work with big data, we maintained and developed the GUI for it, so there is a user friendly interaction available. There I have worked to implement different features, fix bugs and make the platform an better website."
-      },
-      {
-        "title": "Compass",
-        "description": "Is a fork of the offical open-source application that was adjusted to use it for interacting with internal big data."
+        "description": "Swisscom Data Console is an interal tool to work with big data, we maintained and developed the frontend for it, so there is a user friendly interaction available. There I have worked to implement different features, fix bugs and make the platform an better website."
       }
     ]
   },
   {
-    "id": 2,
+    "id": 4,
     "company": "Swisscom Schweiz AG",
     "position": "Apps Team Full-stack Developer",
     "timestamp": "01/03/2023 - 01/03/2024",
@@ -43,12 +53,12 @@
     "projects": [
       {
         "title": "Swisscom Event Planning Tool",
-        "description": "This project involved creating a website to display various upcoming events. The goal was to place these displays at the entrance of the offices, allowing employees to view upcoming events. I worked entirely independently on this customer project. To achieve this, I planned a comprehensive database schema, which formed the foundation for developing the backend of the website. The backend was built using NestJS and PrismaORM, with API documentation created using Swagger. Once the backend was complete, I developed the frontend based on mockups provided by the designers. The frontend was built using React, Tailwind CSS, and TypeScript."
+        "description": "This project involved creating a webapp to display various upcoming events. The goal was to place these displays at the entrance of the offices, allowing employees to view upcoming events. I worked entirely independently on this customer project. To achieve this, I planned a comprehensive database schema, which formed the foundation for developing the backend of the website. The backend was built using NestJS and PrismaORM, with API documentation created using Swagger. Once the backend was complete, I developed the frontend based on mockups provided by the designers. The frontend was built using React, Tailwind CSS, and TypeScript."
       }
     ]
   },
   {
-    "id": 3,
+    "id": 5,
     "company": "Swisscom Schweiz AG",
     "position": "Mac Workplace Team",
     "timestamp": "01/08/2022 - 01/02/2023",
