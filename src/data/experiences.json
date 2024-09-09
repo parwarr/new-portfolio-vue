@@ -2,6 +2,20 @@
   {
     "id": 1,
     "company": "Swisscom Schweiz AG",
+    "position": "DevOpsEngineerr @ Analytics for B2B",
+    "timestamp": "01/08/2024 - Present",
+    "description": ""
+  },
+  {
+    "id": 2,
+    "company": "Swisscom Schweiz AG",
+    "position": "Apprenticeship",
+    "timestamp": "01/03/2024 - 31/07/2024",
+    "description": "Throughout the apprenticeship I was able to work in different areas of fields where I was able to gain and learn many new skills."
+  },
+  {
+    "id": 3,
+    "company": "Swisscom Schweiz AG",
     "position": "Full-Stack Engineer @ DNA Data Services",
     "timestamp": "01/03/2024 - 31/07/2024",
     "description": "As a Fullstack Engineer I support the Atlas team in the further development of internal data web applications.",
@@ -22,7 +36,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 4,
     "company": "Swisscom Schweiz AG",
     "position": "Apps Team Full-stack Developer",
     "timestamp": "01/03/2023 - 01/03/2024",
@@ -44,7 +58,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 5,
     "company": "Swisscom Schweiz AG",
     "position": "Mac Workplace Team",
     "timestamp": "01/08/2022 - 01/02/2023",

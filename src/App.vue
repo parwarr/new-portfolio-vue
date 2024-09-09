@@ -4,7 +4,7 @@
     <About id="about" />
     <!-- <AboutMeText id="aboutMeText" /> -->
     <Experience id="experience" />
-    <CurrProjects id="currProjects" />
+    <!-- <CurrProjects id="currProjects" /> -->
     <Projects id="projects" />
     <Contact id="contact" />
     <el-backtop
