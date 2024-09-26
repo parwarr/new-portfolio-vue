@@ -12,7 +12,9 @@
       "Splunk",
       "Bash",
       "Linux",
-      "Python"
+      "Python",
+      "Ansible",
+      "CI/CD"
     ]
   },
   {
