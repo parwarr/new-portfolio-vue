@@ -17,7 +17,7 @@
     >
       <div class="flex flex-col items-center justify-center mt-4">
         <p class="text-slate-400 max-w-[70ch] text-center">
-          Feel free to send me a message if you are interested in getting in touch. You can reach me through <a href="https://www.linkedin.com/in/parwar-h-6a48a226b/" target="_blank" class="font-poppins font-normal text-[#05CBEE]">LinkedIn</a> or directly via <a href="mailto:parwar.habasch@gmx.de" target="_blank" class="font-poppins font-normal text-[#05CBEE]">E-Mail</a>.<br/> If you are curious about my further development, you can follow me on <a href="https://github.com/parwarr" target="_blank" class="font-poppins font-normal text-[#05CBEE]">Github</a>.
+          Feel free to send me a message if you are interested in getting in touch. You can reach me through <a href="https://www.linkedin.com/in/parwar-h-6a48a226b/" target="_blank" class="font-poppins font-normal text-[#05CBEE]">LinkedIn</a> or directly via <a href="mailto:xxx" target="_blank" class="font-poppins font-normal text-[#05CBEE]">E-Mail</a>.<br/> If you are curious about my further development, you can follow me on <a href="https://github.com/parwarr" target="_blank" class="font-poppins font-normal text-[#05CBEE]">Github</a>.
         </p>
       </div>
 <!--      <el-card-->
